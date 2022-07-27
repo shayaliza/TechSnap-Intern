@@ -33,7 +33,7 @@ a
     scroll-behavior: smooth;
 }
 .side-panel-container::-webkit-scrollbar {
-    width: 10px; 
+    width: 6px; 
     background: transparent;  
     scroll-behavior: smooth;
 }
@@ -387,6 +387,10 @@ a
     {
         display: block !important;
     }
+    /* .body, .navigation
+    {
+        filter: none !important;
+    } */
 }
 @media(max-width: 482px)
 {
