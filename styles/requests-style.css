@@ -21,6 +21,10 @@
     justify-content: space-between;
     color: rgb(30, 30, 30);
 }
+.heading-item
+{
+    padding: 15px 0px;
+}
 .head 
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
@@ -34,10 +38,6 @@
     font-weight: bold;
     font-size: 38px;
     letter-spacing: 1px;
-}
-.heading-item
-{
-    padding: 15px 0px;
 }
 /* Filter and search */
 .filter-search
@@ -212,6 +212,7 @@ td
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .page-num p
 {
@@ -298,6 +299,7 @@ td
     .heading 
     {
         flex-direction: column;
+        align-items: centers;
     }
     .tab p
     {
@@ -314,12 +316,9 @@ td
     {
         width: 100%;
     }
-
-}
-@media(max-width: 482px)
-{
-    table 
-    {
-        width: 80%;
+    .groups-item 
+    {   
+        margin: 10px;
     }
+
 }
