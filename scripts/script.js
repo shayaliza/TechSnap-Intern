@@ -21,13 +21,16 @@ heading.addEventListener("click", () => {
 var menu = document.getElementById('menu')
 var panel = document.getElementsByClassName('side-panel-container')[0]
 var close = document.getElementById('close')
+var body = document.getElementsByClassName("body")[0]
 
 menu.addEventListener("click", () => {
     panel.style.display = "block"
+    body.style.filter = "blur(5px)"
 })
 
 close.addEventListener("click", () => {
     panel.style.display = "none"
+    body.style.filter = "none"
 })
 
 var noti = document.getElementsByClassName('noti-icon')[0]
@@ -40,14 +43,14 @@ noti.addEventListener("click", () => {
     if(noti_list.className === "notification-list-container noti-notdisplay")
     {
         noti_list.className = "notification-list-container noti-display"
-        noti.style.content = "url('rsc/icons8-notification.gif')"
+        // noti.style.content = "url('rsc/icons8-notification.gif')"
         prof_list.className = "profile-container prof-notdisplay"
-        profile.style.border = "none"
+        // profile.style.border = "none"
     }
     else
     {
         noti_list.className = "notification-list-container noti-notdisplay"
-        noti.style.content = "url('rsc/icons8-notification-48\ \(1\).png')"
+        // noti.style.content = "url('rsc/icons8-notification-48\ \(1\).png')"
     }
 })
 
@@ -55,13 +58,24 @@ profile.addEventListener("click", () => {
     if(prof_list.className === "profile-container prof-notdisplay")
     {
         prof_list.className = "profile-container prof-display"
-        profile.style.border = "3px solid #ffc824"
+        // profile.style.border = "3px solid #ffc824"
         noti_list.className = "notification-list-container noti-notdisplay"
-        noti.style.content = "url('rsc/icons8-notification-48\ \(1\).png')"
+        // noti.style.content = "url('rsc/icons8-notification-48\ \(1\).png')"
     }
     else
     {
         prof_list.className = "profile-container prof-notdisplay"
-        profile.style.border = "none"
+        // profile.style.border = "none"
+    }
+})
+
+body.addEventListener("click", () => {
+    if(noti_list.className === "notification-list-container noti-display")
+    {
+        noti_list.className = "notification-list-container noti-notdisplay"
+    }
+    if(prof_list.className === "profile-container prof-display")
+    {
+        prof_list.className = "profile-container prof-notdisplay"
     }
 })
