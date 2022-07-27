@@ -206,7 +206,7 @@
     }
     .course-sets
     {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
     }
     .course
     {
@@ -225,7 +225,7 @@
 {
     .course-sets
     {
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
     }
     .searchbar
     {
@@ -254,5 +254,9 @@
         font-weight: bold;
         font-size: 26px;
         letter-spacing: 1px;
+    }
+    .course-sets
+    {
+        grid-template-columns: auto;
     }
 }
