@@ -29,8 +29,24 @@ a
     background-image: linear-gradient( 180.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
     box-shadow: rgba(48, 47, 47, 0.24) 12px 0px 120px;
     z-index: 2;
-    /* overflow-y: scroll;
-    scroll-behavior: smooth; */
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.side-panel-container:hover 
+{
+    overflow-y: scroll;
+}
+.side-panel-container::-webkit-scrollbar {
+    width: 10px; 
+    background: transparent;  
+    scroll-behavior: smooth;
+}
+.side-panel-container::-webkit-scrollbar-thumb{
+    background: rgba(207, 206, 206, 0.699); 
+    border-radius: 1px;
+}
+.side-panel-container::-webkit-scrollbar-thumb:hover{
+    background: rgba(207, 206, 206, 0.842); 
 }
 .side-panel
 {
@@ -38,7 +54,7 @@ a
 }
 .panel-item:not(.course-details), .detail, .panel-heading
 {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     align-items: center;
 }
