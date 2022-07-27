@@ -169,11 +169,12 @@
 .ann-links-docs 
 {
     display: flex;
+    flex-direction: row;
 }
 .links, .docs 
 {
     display: flex;
-    padding-right: 20px;
+    margin-right: 10px;
 }
 .link-num, .docs-num
 {
@@ -226,11 +227,23 @@
         flex-direction: column;
     }
 }
-@media(max-width: 468px)
+@media(max-width: 482px)
 {
     .tab p
     {
         display: none;
+    }
+    .ann-item
+    {
+        margin: 10px;
+    }
+    .ann-links-docs 
+    {
+        flex-direction: column;
+    }
+    .links, .docs 
+    {
+        padding: 2px 0px;
     }
 }
 
