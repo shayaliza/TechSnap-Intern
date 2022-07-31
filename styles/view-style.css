@@ -1,6 +1,6 @@
 .body
 {
-    padding-left: 300px;
+    padding-left: 210px;
     padding-top: 70px;
     color: rgb(30, 30, 30);
 }
@@ -22,19 +22,16 @@
     justify-content: space-between;
     color: rgb(30, 30, 30);
 }
-.head 
+.heading-name
 {
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 1px;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
     background-size: 100% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
     padding-bottom: 10px;
-}
-.heading-name
-{
-    font-weight: bold;
-    font-size: 38px;
-    letter-spacing: 1px;
 }
 .heading-item
 {
@@ -54,28 +51,28 @@
 {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 6px 12px;
     border-radius: 4px;
     border: none;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
     color: white;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .release-btn img
 {
     margin-right: 5px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 .edit-btn img
 {
     margin-right: 6px;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 .release-btn:hover, .edit-btn:hover
 {
@@ -84,14 +81,14 @@
 /* announcement */
 .announcement p
 {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 27px;
 }
 /* Links and Files */
 .links .heading .heading-item .heading-name, .docs .heading .heading-item .heading-name
 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 15px;
     letter-spacing: 1px;
 }
 .links .heading .head, .docs .heading .head 
@@ -110,7 +107,7 @@
 {
     display: flex;
     align-items: center;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     border: none;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
@@ -127,10 +124,10 @@
 }
 .dustbin 
 {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     margin-left: 10px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 .link-name 
 {
@@ -139,6 +136,7 @@
     background-repeat: no-repeat;
     background-position: left bottom;
     transition: background-size 300ms ease;
+    font-size: 15px;
 }
 .link-name:hover 
 {
