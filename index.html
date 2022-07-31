@@ -6,64 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/courses-style.css">
-    <link rel="stylesheet" href="styles/filter-popup.css">
+    <link rel="stylesheet" href="styles/add-popup.css">
     <link rel="icon" type="image/x-icon" href="rsc/icons8-project-management-48.png">
     <title>Courses</title>
 </head>
 <body>
-    <div class="filter-popup">
-        <div class="filters-cont">
-            <div class="filter-heading">
-                <p class="filters">Filters</p>
-                <img src="rsc/icons8-close-50.png" alt="" class="filter-close">
-            </div>
-            <div class="filter-options">
-                <div class="filter-option">
-                    <p class="filter-option-heading">
-                        Recency
-                    </p>
-                    <p class="options">
-                        <span class="option">
-                            Last 30 days
-                        </span>
-                        <span class="option">
-                            Last 7 days
-                        </span>
-                        <span class="option">
-                            Today
-                        </span>
-                    </p>
-                </div>
-                <div class="filter-option">
-                    <p class="filter-option-heading">
-                        My Activity
-                    </p>
-                    <p class="options">
-                        <span class="option">
-                            Last 30 days
-                        </span>
-                        <span class="option">
-                            Last 7 days
-                        </span>
-                        <span class="option">
-                            Today
-                        </span>
-                    </p>
-                </div>
-                <div class="filter-option">
-                    <p class="filter-option-heading">
-                        Author
-                    </p>
-                    <p class="options">
-                        <span class="option">
-                            Last 30 days
-                        </span>
-                    </p>
-                </div>
-                <div class="filter-apply">
-                    <button class="filter-apply-btn">Apply</button>
+    <div class="add-course">
+        <div class="popup">
+            <div class="left">
+                <div class="left-cont">
+                    <img src="rsc/icons8-project-management-48.png" alt="">
+                    <h3>managesnap</h3>
                 </div>
             </div>
+            <div class="right">
+                <div class="right-cont">
+                    <div class="right-item">
+                        <h3>
+                            Course Title
+                        </h3>
+                        <input type="text" name="" id="" placeholder="enter course title">
+                    </div>
+                    <div class="right-item">
+                        <button class="upload">Upload Banner Image</button>
+                    </div>
+                    <div class="right-item ac-btn">
+                        <button class="a"><a href="">Upload</a></button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <img src="rsc/icons8-close-50.png" alt="" class="cancel-icon">
         </div>
     </div>
     <div class="notification-list-container noti-notdisplay">
@@ -164,35 +137,35 @@
                 <div class="details">
                     <div class="detail announcements">
                         <img src="rsc/icons8-commercial-48.png" alt="" class="item">
-                        <p class="name"><a href="">Announcements</a></p>
+                        <p class="name"><a href="announcements.html">Announcements</a></p>
                     </div>
                     <div class="detail timetable">
                         <img src="rsc/icons8-calendar-48.png" alt="" class="item">
-                        <p class="name"><a href="">Timetable</a></p>
+                        <p class="name"><a href="timetable.html">Timetable</a></p>
                     </div>
                     <div class="detail syllabus">
                         <img src="rsc/icons8-google-classroom-48.png" alt="" class="item">
-                        <p class="name"><a href="">Syllabus</a></p>
+                        <p class="name"><a href="syllabus.html">Syllabus</a></p>
                     </div>
                     <div class="detail assignment">
                         <img src="rsc/icons8-audit-48.png" alt="" class="item">
-                        <p class="name"><a href="">Assignment</a></p>
+                        <p class="name"><a href="assignment.html">Assignment</a></p>
                     </div>
                     <div class="detail caesum">
                         <img src="rsc/icons8-read-online-48.png" alt="" class="item">
-                        <p class="name"><a href="">Caesum</a></p>
+                        <p class="name"><a href="caesum.html">Caesum</a></p>
                     </div>
                     <div class="detail exams">
                         <img src="rsc/icons8-hand-with-pen-48.png" alt="" class="item">
-                        <p class="name"><a href="">Exams</a></p>
+                        <p class="name"><a href="exams.html">Exams</a></p>
                     </div>
                     <div class="detail quiz">
                         <img src="rsc/icons8-help-48.png" alt="" class="item">
-                        <p class="name"><a href="">Quiz</a></p>
+                        <p class="name"><a href="quiz.html">Quiz</a></p>
                     </div>
                     <div class="detail units">
                         <img src="rsc/icons8-unit-48.png" alt="" class="item">
-                        <p class="name"><a href="">Units</a></p>
+                        <p class="name"><a href="units.html">Units</a></p>
                     </div>
                 </div>
             </div>
@@ -232,7 +205,7 @@
                     <img src="rsc/icons8-search-50 (4).png" alt="" class="search-icon search-item">
                 </div>
                 <div class="filter fs-item">
-                    <button class="filter-btn"><img src="rsc/icons8-settings-34.png" alt=""><p>Filter</p></button>
+                    <button class="filter-btn" id="add-course-btn">Add</button>
                 </div>
             </div>
             <div class="courses course-item">
@@ -362,6 +335,6 @@
         </div>
     </div>
     <script src="scripts/script.js"></script>
-    <script src="scripts/filter-popup.js"></script>
+    <script src="scripts/add-course.js"></script>
 </body>
 </html>
