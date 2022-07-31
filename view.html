@@ -6,10 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/view-style.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/add-popup.css">
     <link rel="icon" type="image/x-icon" href="rsc/icons8-project-management-48.png">
-    <title>View Announcements</title>
+    <title>Announcement-1</title>
 </head>
 <body>
+    <div class="add-popup">
+        <div class="popup">
+            <div class="left">
+                <div class="left-cont">
+                    <img src="rsc/icons8-project-management-48.png" alt="">
+                    <h3>managesnap</h3>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-cont">
+                    <h3 class="right-item">
+                        Add Link
+                    </h3>
+                    <div class="right-item">
+                        <input type="text" name="" id="" placeholder="add link">
+                    </div>
+                    <div class="right-item ac-btn">
+                        <button class="a"><a href="">Save</a></button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <img src="rsc/icons8-close-50.png" alt="" class="cancel-icon">
+        </div>
+    </div>
+    <div class="edit-popup">
+        <div class="popup">
+            <div class="left">
+                <div class="left-cont">
+                    <img src="rsc/icons8-project-management-48.png" alt="">
+                    <h3>managesnap</h3>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-cont">
+                    <div class="right-item">
+                        <textarea name="" id="" cols="58" rows="1" class="textarea first"></textarea>
+                    </div>
+                    <div class="right-item">
+                        <textarea name="" id="" cols="58" rows="13" class="textarea second"></textarea>
+                    </div>
+                    <div class="right-item ac-btn">
+                        <button class="a"><a href="">Save</a></button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <img src="rsc/icons8-close-50.png" alt="" class="cancel-icon">
+        </div>
+    </div>
     <div class="notification-list-container noti-notdisplay">
         <div class="notification-list">
             <div class="notification-heading">
@@ -112,31 +163,31 @@
                     </div>
                     <div class="detail timetable">
                         <img src="rsc/icons8-calendar-48.png" alt="" class="item">
-                        <p class="name"><a href="">Timetable</a></p>
+                        <p class="name"><a href="timetable.html">Timetable</a></p>
                     </div>
                     <div class="detail syllabus">
                         <img src="rsc/icons8-google-classroom-48.png" alt="" class="item">
-                        <p class="name"><a href="">Syllabus</a></p>
+                        <p class="name"><a href="syllabus.html">Syllabus</a></p>
                     </div>
                     <div class="detail assignment">
                         <img src="rsc/icons8-audit-48.png" alt="" class="item">
-                        <p class="name"><a href="">Assignment</a></p>
+                        <p class="name"><a href="assignment.html">Assignment</a></p>
                     </div>
                     <div class="detail caesum">
                         <img src="rsc/icons8-read-online-48.png" alt="" class="item">
-                        <p class="name"><a href="">Caesum</a></p>
+                        <p class="name"><a href="caesum.html">Caesum</a></p>
                     </div>
                     <div class="detail exams">
                         <img src="rsc/icons8-hand-with-pen-48.png" alt="" class="item">
-                        <p class="name"><a href="">Exams</a></p>
+                        <p class="name"><a href="exams.html">Exams</a></p>
                     </div>
                     <div class="detail quiz">
                         <img src="rsc/icons8-help-48.png" alt="" class="item">
-                        <p class="name"><a href="">Quiz</a></p>
+                        <p class="name"><a href="quiz.html">Quiz</a></p>
                     </div>
                     <div class="detail units">
                         <img src="rsc/icons8-unit-48.png" alt="" class="item">
-                        <p class="name"><a href="">Units</a></p>
+                        <p class="name"><a href="units.html">Units</a></p>
                     </div>
                 </div>
             </div>
@@ -171,7 +222,7 @@
                 <div class="heading view-item">
                     <div class="head heading-item">
                         <p class="heading-name">
-                            Announcements
+                            Announcement-1
                         </p>
                     </div>
                     <div class="release-edit heading-item">
@@ -262,5 +313,6 @@
         </div>
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/add-popup.js"></script>
 </body>
 </html>
