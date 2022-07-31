@@ -22,7 +22,7 @@ a
 /* Side Panel */
 .side-panel-container
 {
-    width: 300px;
+    width: 210px;
     position: fixed;
     height: 100%;
     background-color: rgb(30, 30, 30);
@@ -50,7 +50,7 @@ a
 }
 .panel-item:not(.course-details), .detail, .panel-heading
 {
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items: center;
 }
@@ -62,28 +62,28 @@ a
 {
     margin-right: 7px;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
 }
 #arrow
-{
-    width: 24px;
-    height: 24px;
-}
-.panel-item:not(.logo-item) img, .detail img
 {
     width: 20px;
     height: 20px;
 }
+.panel-item:not(.logo-item) img, .detail img
+{
+    width: 18px;
+    height: 18px;
+}
 .name a
 {
-    font-size: 16px;
+    font-size: 15px;
     margin-left: 10px;
     text-decoration: none;
     color: white;
 }
 .name a:hover
 {
-    font-size: 17px;
+    font-size: 15px;
     color: #ffc824;
     transition: 0.4s;
 }
@@ -95,7 +95,7 @@ a
     width: 100%;
     border: none;
     padding: 6px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
@@ -109,7 +109,7 @@ a
 .support button:hover
 {
     background-color: #fabc04;
-    font-size: 16px;
+    font-size: 15px;
     transition: 0.5s;
 }
 /* logo */
@@ -123,13 +123,13 @@ a
     letter-spacing: 1px;
     margin-left: 5px;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Raleway', sans-serif;
 }
 .logo-image
 {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     margin-left: -3px;
 }
 .logo-item 
@@ -139,8 +139,8 @@ a
 }
 #close
 {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     display: none;
 }
 /* Navigation bar */
@@ -174,14 +174,15 @@ a
 }
 .nav-logo-image
 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 .nav-logo-text
 {
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
+    color: white;
 }
 .nav-logo-item
 {
@@ -380,6 +381,10 @@ a
     {
         display: block;
     }
+    .nav-logo-text
+    {
+        color: rgb(30, 30, 30);
+    }
 }
 @media(min-width: 1024px)
 {
@@ -387,17 +392,9 @@ a
     {
         display: block !important;
     }
-    /* .body, .navigation
-    {
-        filter: none !important;
-    } */
 }
 @media(max-width: 482px)
 {
-    .side-panel-container
-    {
-        width: 270px;
-    }
     .nav-logo-text
     {
         display: none;
