@@ -7,16 +7,8 @@ var panel = document.getElementsByClassName("side-panel-container")[0]
 
 filter_btn.addEventListener("click", () => {
     filter_popup.style.display = "block"
-    body_.style.filter = "blur(10px)"
-    navi.style.filter = "blur(10px)"
-    panel.style.filter = "blur(10px)"
-    document.body.style.overflowY = "hidden"
 })
 
 filter_close.addEventListener("click", () => {
     filter_popup.style.display = "none"
-    body_.style.filter = "none"
-    navi.style.filter = "none"
-    panel.style.filter = "none"
-    document.body.style.overflowY = "scroll"
 })
