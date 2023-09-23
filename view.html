@@ -8,59 +8,9 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/add-popup.css">
     <link rel="icon" type="image/x-icon" href="rsc/icons8-project-management-48.png">
-    <title>Announcement-1</title>
+    <title>Announcement</title>
 </head>
 <body>
-    <div class="add-popup">
-        <div class="popup">
-            <div class="left">
-                <div class="left-cont">
-                    <img src="rsc/icons8-project-management-48.png" alt="">
-                    <h3>managesnap</h3>
-                </div>
-            </div>
-            <div class="right">
-                <div class="right-cont">
-                    <h3 class="right-item">
-                        Add Link
-                    </h3>
-                    <div class="right-item">
-                        <input type="text" name="" id="" placeholder="add link">
-                    </div>
-                    <div class="right-item ac-btn">
-                        <button class="a"><a href="">Save</a></button>
-                        <button class="cancel">Cancel</button>
-                    </div>
-                </div>
-            </div>
-            <img src="rsc/icons8-close-50.png" alt="" class="cancel-icon">
-        </div>
-    </div>
-    <div class="edit-popup">
-        <div class="popup">
-            <div class="left">
-                <div class="left-cont">
-                    <img src="rsc/icons8-project-management-48.png" alt="">
-                    <h3>managesnap</h3>
-                </div>
-            </div>
-            <div class="right">
-                <div class="right-cont">
-                    <div class="right-item">
-                        <textarea name="" id="" cols="58" rows="1" class="textarea first"></textarea>
-                    </div>
-                    <div class="right-item">
-                        <textarea name="" id="" cols="58" rows="13" class="textarea second"></textarea>
-                    </div>
-                    <div class="right-item ac-btn">
-                        <button class="a"><a href="">Save</a></button>
-                        <button class="cancel">Cancel</button>
-                    </div>
-                </div>
-            </div>
-            <img src="rsc/icons8-close-50.png" alt="" class="cancel-icon">
-        </div>
-    </div>
     <div class="notification-list-container noti-notdisplay">
         <div class="notification-list">
             <div class="notification-heading">
@@ -219,99 +169,215 @@
     <div class="body">
         <div class="view-container">
             <div class="view">
-                <div class="heading view-item">
+                    <!-- Announcement section -->
+                    <div class="heading view-item">
+                        <div class="head heading-item">
+                            <p class="heading-name">
+                                Announcement
+                            </p>
+                        </div>
+                        <div class="release-edit heading-item">
+                            <div class="release">
+                                <button class="release-btn" >
+                                    <img src="rsc/icons8-telegram-app-30.png" alt="" class="icon">
+                                    <p>Release</p>
+                                </button>
+                            </div>
+                            <div class="edit">
+                                <button class="edit-btn" id="openAnnouncementPopup">
+                                    <img src="rsc/icons8-edit-26.png" alt="" class="icon">
+                                    <p>Edit</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                    <div class="announcement-list announcement view-item">
+                        <div>
+                            <h4>Announcement-1</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum asperiores, quibusdam libero rem a placeat quis doloribus eligendi cum maiores iusto facere repellat. Sequi asperiores ducimus, quae nihil labore atque totam voluptatem vitae laborum quibusdam repellendus, eum, iure est dolor quasi neque sit doloremque.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- ==========links section=============== -->
+            
+                    <div class="links view-item">
+                        <div class="heading links-item">
+                            <div class="head heading-item">
+                                <p class="heading-name">
+                                    Links
+                                </p>
+                            </div>
+                            <div class="add-item heading-item">
+                                <div class="add">
+                                    <button class="add-btn" id="addLinkBtn">
+                                        <p>Add +</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="links-item">
+                        <!-- Links will be added here -->
+
+                            <ol class="link-list">
+                                <li class="link">
+                                    <span class="link-name"><a href="https://www.google.com">sb-how-img3.webp</a></span>
+                                    <span class="delete-link" data-url="https//www.google.come/"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                                </li>
+                                <li class="link">
+                                    <span class="link-name"><a href="https://www.google.com">sb-how-img3.webp</a></span>
+                                    <span class="delete-link" data-url="https//www.google.come/"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                                </li>
+                                <li class="link">
+                                    <span class="link-name"><a href="https://www.google.com">sb-how-img3.webp</a></span>
+                                    <span class="delete-link" data-url="https//www.google.come/"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                                </li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+            
+            <!-- ====== upload files section ============== -->
+
+            <div class="docs view-item">
+                <div class="heading docs-item">
                     <div class="head heading-item">
                         <p class="heading-name">
-                            Announcement-1
+                            Files
                         </p>
                     </div>
-                    <div class="release-edit heading-item">
-                        <div class="release">
-                            <button class="release-btn">
-                                <img src="rsc/icons8-telegram-app-30.png" alt="" class="icon">
-                                <p>Release</p>
-                            </button>
-                        </div>
-                        <div class="edit">
-                            <button class="edit-btn">
-                                <img src="rsc/icons8-edit-26.png" alt="" class="icon">
-                                <p>Edit</p>
+                    <div class="add-item heading-item">
+                        <div class="add">
+                            <button class="upload-btn" id="uploadFileBtn">
+                                <p>Upload files</p>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="announcement view-item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi blanditiis hic atque quisquam consequatur numquam illo tenetur nostrum quibusdam impedit eligendi doloribus ea ab fugit iure veritatis, debitis perferendis sint provident deserunt ex reiciendis omnis deleniti! Magnam, nemo magni? Harum.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusantium dolores ipsam dignissimos minima voluptatem veniam dolore blanditiis possimus, adipisci iusto maxime obcaecati omnis explicabo fugiat? Incidunt vero repellendus debitis.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam accusantium dolores ipsam dignissimos minima voluptatem veniam dolore blanditiis possimus, adipisci iusto maxime obcaecati omnis explicabo fugiat? Incidunt vero repellendus debitis.</p>
+                <input type="file" id="fileInput" style="display: none;" accept=".pdf, .doc, .docx, .txt, .jpg, .jpeg, .png">
+                
+                <div class="docs-item">
+                    <ol class="file-list">
+                        <li class="link">
+                            <span class="link-name file-link"><a href="">sb-how-img3.webp</a></span>
+                            <span class="delete-file"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                        </li>
+                        <li class="link">
+                            <span class="link-name file-link"><a href="">sb-how-img3.webp</a></span>
+                            <span class="delete-file"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                        </li>
+                        <li class="link">
+                            <span class="link-name file-link"><a href="">sb-how-img3.webp</a></span>
+                            <span class="delete-file"><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
+                        </li>
+
+                    </ol>
                 </div>
-                <div class="links view-item">
-                    <div class="heading links-item">
-                        <div class="head heading-item">
-                            <p class="heading-name">
-                                Links
-                            </p>
-                        </div>
-                        <div class="add-item heading-item">
-                            <div class="add">
-                                <button class="add-btn">
-                                    <p>Add +</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links-item">
-                        <ol class="links-list">
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                        </ol>
+            </div>
+        
+
+            <!-- Announcement popup -->
+            <div class="modal flex-modal" id="announcementModal">
+                
+                <div class="modal-container">
+                <div class="left">
+                    <div class="left-cont">
+                        <img src="rsc/icons8-project-management-48.png" alt="">
+                        <h3>managesnap</h3>
                     </div>
                 </div>
-                <div class="docs view-item">
-                    <div class="heading docs-item">
-                        <div class="head heading-item">
-                            <p class="heading-name">
-                                Files
-                            </p>
+                <div class="modal-box">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Announcement</h5>
+                            <div type="button" class="close" id="closeAnnouncementPopup">&times;</div>
                         </div>
-                        <div class="add-item heading-item">
-                            <div class="add">
-                                <button class="add-btn">
-                                    <p>Add +</p>
-                                </button>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="announcementHeading">Heading:</label>
+                                <input type="text" class="form-control textarea" id="announcementHeading" spellcheck="false">
+                            </div>
+                            <div class="form-group">
+                                <label for="announcementDescription">Description:</label>
+                                <textarea class="form-control textarea" id="announcementDescription" spellcheck="false"></textarea>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="gradient-btn" id="saveAnnouncement">Save</button>
+                        </div>
                     </div>
-                    <div class="docs-item">
-                        <ol class="links-list">
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                            <li class="link">
-                                <span class="link-name"><a href="">sb-how-img3.webp</a></span>
-                                <span><a href=""><img src="rsc/icons8-trash-32 (1).png" alt="" class="dustbin"></a></span>
-                            </li>
-                        </ol>
+                </div>
+                <div class="overlay"></div>
+
+                </div>
+            </div>
+
+                <!-- Link popup -->
+            <div class="modal flex" id="linkModal">
+                <div class="modal-container">
+                <div class="left">
+                    <div class="left-cont">
+                        <img src="rsc/icons8-project-management-48.png" alt="">
+                        <h3>managesnap</h3>
+                    </div>
+                </div>
+                <div class="modal-box">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add Link</h5>
+                            <div type="button" class="close" id="closeLinkModal">&times;</div>
+                        </div>
+        
+                        <div class="modal-body">
+                            <div class="form-group link-group">
+                                <label for="linkUrl">URL:</label>
+                                <input type="url" class="form-control" id="linkUrl">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="gradient-btn" id="saveLink">Save</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="overlay"></div>
+            </div>
+
+                        <!-- File popup -->
+                        <div class="modal flex" id="fileModal">
+                            <div class="modal-container">
+                                <div class="left">
+                                    <div class="left-cont">
+                                        <img src="rsc/icons8-project-management-48.png" alt="">
+                                        <h3>managesnap</h3>
+                                    </div>
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Upload File</h5>
+                                            <div type="button" class="close" id="closefileBtn">&times;</div>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="file" id="fileToUpload" accept=".pdf, .doc, .docx, .txt, .jpg, .jpeg, .png">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="gradient-btn" id="saveFile">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/add-popup.js"></script>
 </body>

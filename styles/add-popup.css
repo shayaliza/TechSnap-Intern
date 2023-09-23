@@ -1,100 +1,32 @@
-/* Add popup */
-.add-popup 
-{
-    position: fixed;
-    width: 800px;
-    height: 400px;
-    top: 50%;
-    left: 50%;
-    margin-left: -400px;
-    margin-top: -200px;
-    display: none;
-    z-index: 4;
-}
-.popup
-{
-    display: flex;
-}
-.right, .left 
-{
-    height: 400px;
-}
-.left 
-{
-    width: 300px;
-}
-.right 
-{
-    width: 500px;
-}
-.right-cont 
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.right-cont h3
-{
-    font-size: 20px;
-}
-.right-item input[type="text"]
-{
-    width: 400px;
-    font-size: 14px;
+
+.gradient-btn{
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
     border: none;
-    padding: 8px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    height: 40px;
+}
+
+.gradient-btn:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,   rgba(116,182,247,1) 0% , rgba(171,102,255,1) 90%);
+
+}
+
+.textarea input,
+.textarea textarea{
     background-color: rgb(246, 246, 246);
-}
-::placeholder
-{
-    color: rgb(169, 166, 166);
-}
-.right-item input[type="text"]:focus
-{
+    border: none;
     outline: none;
 }
-.right
-{
-    background-color: white;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: flex;
-    justify-content: center;
-}
-.right-item
-{
-    padding: 10px;
-}
-.ac-btn button, .upload
-{
-    padding: 6px 12px;
-    margin-right: 10px;
-    text-align: center;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-}
-.ac-btn button:hover 
-{
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
-}
-.a 
-{
-    background-image: linear-gradient( 73.1deg,  rgba(34,126,34,1) 8%, rgba(99,162,17,1) 86.9% );
-}
-.cancel
-{
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(247,87,0,1) 0%, rgba(249,0,0,1) 90.1% );
-}
-.cancel-icon 
-{
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    margin-left: -40px;
-    margin-top: 20px;
-}
+
+/* left popup */
 .left
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
@@ -124,34 +56,140 @@
     width: 50px;
     height: 50px;
 }
-/* Edit popup */
-.edit-popup 
-{
-    position: fixed;
-    width: 800px;
+
+/* ========right-popup=============== */
+
+/* container setting */
+.modal-container{
+    width: 80%;
+    max-width: 800px;
     height: 400px;
-    top: 50%;
-    left: 50%;
-    margin-left: -400px;
-    margin-top: -200px;
-    z-index: 4;
-    display: none;
+    margin:auto ;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top:20vh;
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.edit-popup .popup .right .right-cont .right-item 
-{
-    padding: 5px;
+
+.left{
+    width: 40%;
+    min-width: 250px;
+    height: stretch;
 }
-textarea
-{
+
+.modal-box{
+    width: 60%;
+    min-width: 300px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+.modal-title{
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: -1; 
+    overflow: hidden;
+    
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.form-group input,
+.form-group textarea{
+    font-size: 14px;
     border: none;
+    padding: 8px;
     background-color: rgb(246, 246, 246);
-    border-radius: 3px;
-    padding: 10px;
+    overflow: hidden;
 }
-textarea:focus
-{
+
+.form-group input:focus,
+.form-group textarea:focus{
     outline: none;
 }
+
+label{
+    font-weight: 600;
+    padding-bottom: .25rem;
+}
+textarea{
+    height: 10rem;
+}
+
+/* link popup */
+.link-group{
+    margin-top: .5rem;
+    margin-bottom: rem;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* file popup */
+#fileToUpload{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    width: 100%;
+    padding: .2rem;
+}
+
+#announcementModal,
+#linkModal,
+#fileModal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 10px;
+
+
+}
+#announcementModal{
+    display: none;
+}
+
+#linkModal{
+    display: none;
+}
+
+#fileModal{
+    display: none;
+}
+
+
+.close {
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
 /* Add Course */
 .add-course 
 {
@@ -184,58 +222,72 @@ textarea:focus
 /* Media Queries */
 @media(max-width: 1024px)
 {
-    .add-course, .add-popup, .edit-popup
+    .add-course
     {
         width: 600px;
         height: 300px;
         margin-left: -300px;
         margin-top: -150px;
     }
-    .right, .left 
-    {
-        height: 300px;
-        width: 300px;
-    }
-    .left 
-    {
-        width: 200px;
-    }
-    .right 
-    {
-        width: 400px;
-    }
-    .right-item input[type="text"], .add-course .popup .right .right-cont .right-item input[type="text"], textarea
+     .add-course 
     {
         width: 300px;
-    }
-    .second 
-    {
-        height: 160px;
     }
     
 }
+
 @media(max-width: 650px)
 {
-    .add-course, .add-popup, .edit-popup
+    .modal-container{
+        flex-direction: column;
+       height: 80vh;
+       margin-top:2rem;
+       
+    }
+    .modal-box{
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+    .left{
+        width: 100%;
+        height: 250px;
+        border-radius: 5px 5px 0 0;
+    }
+    .left-cont img{
+        height: 30px;
+        width: 30px;
+    }
+    .left-cont h3{
+        font-size: 1rem;
+    }
+    textarea{
+        height: 120px;
+    }
+
+    /* link popup */
+    .link-group{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    /* file popup */
+    #fileToUpload{
+        margin-top: 1rem;
+        margin-bottom: 7rem;
+        border: 1px solid black;
+        width: 100%;
+        padding: .2rem;
+    }
+
+    .add-course
     {
         width: 300px;
         height: 300px;
         margin-left: -150px;
         margin-top: -150px;
     }
-    .right, .left 
-    {
-        height: 300px;
-    }
-    .left 
-    {
-        width: 120px;
-    }
-    .right 
-    {
-        width: 180px;
-    }
-    .right-item input[type="text"], .add-course .popup .right .right-cont .right-item input[type="text"], textarea
+    
+     .add-course
     {
         width: 140px;
         font-size: 12px;
@@ -244,25 +296,13 @@ textarea:focus
     {
         height: 150px;
     }
-    .left-cont h3
-    {
-        font-size: 12px;
-    }
-    .left-cont img
-    {
-        width: 20px;
-        height: 20px;
-    }
+
     .ac-btn button, .upload
     {   
         padding: 4px 8px;
         margin-right: 5px;
         text-align: center;
         font-size: 12px;
-    }
-    .right-cont h3 
-    {
-        font-size: 14px;
     }
     .cancel-icon 
     {
@@ -272,5 +312,5 @@ textarea:focus
         margin-left: -20px;
         margin-top: 10px;
     }
-}
 
+}

@@ -3,6 +3,7 @@
     padding-left: 210px;
     padding-top: 70px;
     color: rgb(30, 30, 30);
+    overflow: hidden;
 }
 .view-container
 {
@@ -13,7 +14,9 @@
 {
     margin: 10px 30px;
 }
+
 /* Heading */
+
 .heading
 {
     display: flex;
@@ -22,6 +25,7 @@
     justify-content: space-between;
     color: rgb(30, 30, 30);
 }
+
 .heading-name
 {
     font-weight: bold;
@@ -61,6 +65,7 @@
     font-size: 15px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    height: 40px;
 }
 .release-btn img
 {
@@ -74,6 +79,7 @@
     width: 14px;
     height: 14px;
 }
+
 .release-btn:hover, .edit-btn:hover
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,   rgba(116,182,247,1) 0% , rgba(171,102,255,1) 90%);
@@ -103,7 +109,8 @@
     justify-content: space-between;
     color: rgb(30, 30, 30);
 }
-.add-btn
+.add-btn,
+.upload-btn
 {
     display: flex;
     align-items: center;
@@ -117,8 +124,13 @@
     font-size: 14px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    height: 40px;
 }
 .add-btn:hover
+{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,   rgba(116,182,247,1) 0% , rgba(171,102,255,1) 90%);
+}
+.upload-btn:hover
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,   rgba(116,182,247,1) 0% , rgba(171,102,255,1) 90%);
 }
