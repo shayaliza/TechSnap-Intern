@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    const overlay = document.getElementById('overlay');
+    
+    var body = document.getElementsByClassName('body')[0]
+    var navi = document.getElementsByClassName("navigation")[0]
+    var panel = document.getElementsByClassName("side-panel-container")[0]
+
     // ============== announcement popup =================
 
     const announcementModal = document.getElementById('announcementModal');
@@ -7,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeModalBtn = document.getElementById('closeAnnouncementPopup');
     const announcementHeadingInput = document.getElementById('announcementHeading');
     const announcementDescriptionTextarea = document.getElementById('announcementDescription');
-    const overlay = document.getElementById('overlay');
 
 
 
@@ -15,12 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function openAnouncementModal() {
         announcementModal.style.display = 'block';
         overlay.style.display = 'block';
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closeAnnouncementModal() {
         announcementModal.style.display = 'none';
         overlay.style.display = 'none';
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
     }
 
     // Event listener to open the modal when the button is clicked
@@ -30,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closeModalBtn.addEventListener('click', closeAnnouncementModal);
 
     announcementHeadingInput.defaultValue='Announcement';
-    announcementDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere repellat. Sequi asperiores ducimus, qua.'
+    announcementDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere. '
     
 
     //================link popup =============
@@ -40,17 +53,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeLinkModalBtn = document.getElementById('closeLinkModal');
 
 
+
     // Function to open the modal
     function openLinkModal() {
         linkModal.style.display = 'block';
         overlay.style.display = 'block';
-
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        body.style.overflow = "hidden"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closeLinkModal() {
         linkModal.style.display = 'none';
         overlay.style.display = 'none';
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
 
     }
 
@@ -73,13 +95,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function openfileModal() {
         fileModal.style.display = 'block';
         overlay.style.display = 'block';
-
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closefileModal() {
         fileModal.style.display = 'none';
         overlay.style.display = 'none';
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
 
     }
 

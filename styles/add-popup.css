@@ -69,19 +69,18 @@
     justify-content: center;
     margin: auto;
     margin-top:20vh;
-    background-color: rgba(0, 0, 0, 0);
     z-index: 100;
 }
 
 .left{
     width: 40%;
-    min-width: 320px;
+    min-width: 300px;
     height: stretch;
 }
 
 .modal-box{
     width: 60%;
-    min-width: 320px;
+    min-width: 300px;
     padding: 1rem;
     background-color: white;
     border-radius: 0 5px 5px 0;
@@ -102,8 +101,8 @@
     width: 100%;
     height: 100%;
     filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.8); 
-    overflow: hidden;
+    overflow: auto;
+    overflow-anchor: none;
     
 }
 
@@ -241,7 +240,7 @@ textarea{
     .modal-container{
         flex-direction: column;
        height: 80vh;
-       margin-top:2rem;
+       margin-top:2.5rem;
        
     }
     .modal-box{
