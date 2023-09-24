@@ -103,6 +103,8 @@
     filter: blur(10px);
     overflow: auto;
     overflow-anchor: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: hidden;
     
 }
 
