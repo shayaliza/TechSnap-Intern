@@ -9,8 +9,8 @@ var drafts_tab = document.getElementsByClassName('dra')[0]
 function setActiveTabAsCookie(tabName) {
     // Set the cookie with a 7-day expiration
     const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7); // Expires in 7 days
-    document.cookie = `activeTab=${tabName}; expires=${expirationDate.toUTCString()}; path=/`;
+    expirationDate.setDate(expirationDate.getDate() + 7);
+    document.cookie = `activeTab=${tabName}; expires=${expirationDate.toUTCString()}; path=/units.html`;
   }
   
   // Function to get the active tab from a cookie
@@ -37,7 +37,7 @@ drafts_tab.addEventListener("click", () => {
   
   // Function to handle tab switching and store the active tab
   function handleTabSwitch(tabName) {
-    if(tabName=== drafts){
+    if(tabName === drafts){
         released.style.display = "none"
         drafts.style.display = "block"
     //underline
