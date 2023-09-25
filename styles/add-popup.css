@@ -243,9 +243,13 @@ textarea{
         width: 100%;
         border-radius: 5px 5px 0 0;
     }
+    .left-cont{
+        display: flex;
+        align-items: end;
+    }
     .left-cont img{
-        height: auto;
         width: 100%;
+        object-fit: contain;
     }
 
     textarea{
