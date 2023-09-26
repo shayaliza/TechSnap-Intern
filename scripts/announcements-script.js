@@ -7,10 +7,7 @@ var drafts_tab = document.getElementsByClassName('dra')[0]
 
 // Function to set a cookie with the active tab
 function setActiveTabAsCookie(tabName) {
-    // Set the cookie with a 7-day expiration
-    const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7);
-    document.cookie = `activeTab=${tabName}; expires=${expirationDate.toUTCString()}; path=/units.html`;
+    document.cookie = `activeTab=${tabName};`;
   }
   
   // Function to get the active tab from a cookie
@@ -43,7 +40,7 @@ drafts_tab.addEventListener("click", () => {
     //underline
         released_tab.className = "tab rel not-current"
         drafts_tab.className = "tab dra current"
-        setActiveTabAsCookie('drafts');
+        setActiveTabAsCookie(drafts);
     }
 
     else{
@@ -52,11 +49,11 @@ drafts_tab.addEventListener("click", () => {
     //underline
     released_tab.className = "tab rel current"
     drafts_tab.className = "tab dra not-current"
-    setActiveTabAsCookie('released');
+    setActiveTabAsCookie(released);
     }
   }
   
-  // Check localStorage for the active tab and set it on page load
+  // Check cookies if it is stored
   document.addEventListener('DOMContentLoaded', () => {
     const storedActiveTab = getActiveTabFromCookie();
     if (storedActiveTab) {
