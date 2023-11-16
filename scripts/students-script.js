@@ -11,6 +11,7 @@ all_tab.addEventListener("click", () => {
     all_tab.className = "tab rel current"
     toptarget_tab.className = "tab dra not-current"
 })
+
 toptarget_tab.addEventListener("click", () => {
     all.style.display = "none"
     toptarget.style.display = "block"

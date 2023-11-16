@@ -164,6 +164,24 @@ li span a
 {
     color: rgb(30,30,30);
 }
+
+.view-head{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mode p{
+    font-weight: 500;
+    font-size: 12px;
+    padding: 3px;
+    padding-left:6px ;
+    padding-right: 6px;
+    border-radius: 8px;
+    color: rgb(231, 233, 99);
+    background-color: rgb(0, 0, 0);
+}
+
 /* Media queries */
 @media(max-width: 1024px)
 {

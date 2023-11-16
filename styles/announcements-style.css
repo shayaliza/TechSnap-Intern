@@ -235,10 +235,7 @@
 }
 @media(max-width: 482px)
 {
-    .tab p
-    {
-        display: none;
-    }
+ 
     .ann-item
     {
         margin: 10px;

@@ -14,7 +14,7 @@
         <div class="notification-list">
             <div class="notification-heading">
                 <h3>Notifications</h3>
-                <img src="rsc/icons8-expand-50.png" alt="" class="expand">
+                <h3 class="notification-close">x</h3>
             </div>
             <div class="notifications">
                 <div class="notification">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <p class="mark">Mark all as read</p>
+            <button class="mark-as-read">See all notification</button>
         </div>
     </div>
     <div class="profile-container prof-notdisplay">
@@ -63,6 +63,9 @@
                 <div class="user-details">
                     <p class="user-fullname">Emily Rose</p>
                     <p class="user-name">@rose_emily003</p>
+                </div>
+                <div class="profile-close notification-close">
+                    <h4>x</h4>
                 </div>
             </div>
             <div class="settings profile-item">
@@ -185,11 +188,11 @@
                     </div>
                 </div>
                 <div class="tabs ann-item">
-                    <div class="tab rel current">
+                    <div class="tab rel current" id="released-tab">
                         <img src="rsc/icons8-sent-50.png" alt="" class="icon">
                         <p>Released</p>
                     </div>
-                    <div class="tab dra not-current">
+                    <div class="tab dra not-current" id="draft-tab">
                         <img src="rsc/icons8-draft-48.png" alt="" class="icon">
                         <p>Drafts</p>
                     </div>
@@ -207,6 +210,10 @@
                                 <div class="docs">
                                     <img src="rsc/icons8-documents-24.png" alt="" class="icon">
                                     <p class="docs-num">Documents : 3</p>
+                                </div>
+                                <div class="docs">
+                                    <img src="rsc/file-video-line.png" alt="" class="icon">
+                                    <p class="videos-num">Videos : 3</p>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +237,10 @@
                                     <img src="rsc/icons8-documents-24.png" alt="" class="icon">
                                     <p class="docs-num">Documents : 1</p>
                                 </div>
+                                <div class="docs">
+                                    <img src="rsc/file-video-line.png" alt="" class="icon">
+                                    <p class="videos-num">Videos : 2</p>
+                                </div>
                             </div>
                         </div>
                         <div class="ann-buttons">
@@ -244,4 +255,5 @@
     <script src="scripts/script.js"></script>
     <script src="scripts/announcements-script.js"></script>
 </body>
+<div class="overlay" id="overlay"></div>
 </html>
