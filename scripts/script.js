@@ -29,11 +29,11 @@ const mainbody = document.body;
 
 menu.addEventListener("click", () => {
     const overlay = document.getElementById('overlay');
-    mainbody.style.overflow = "hidden"
     overlay.style.display = "block";
     panel.style.display = "block"
-    panel.style.zIndex = "100";
-    body.classList.add('blurred-background');
+    panel.style.zIndex = "100"
+    mainbody.style.overflow = "hidden"
+    mainbody.classList.add('blurred-background');
 
 })
 
@@ -41,10 +41,9 @@ close.addEventListener("click", () => {
 const overlay = document.getElementById('overlay');
     overlay.style.display = "none";
     panel.style.display = "none"
-    panel.style.zIndex = "1";
-    body.style.filter = "none"
-    mainbody.style.overflow = "scroll"
-    body.classList.remove('blurred-background');
+    mainbody.style.overflow = "auto"
+    mainbody.classList.remove('blurred-background');
+
 })
 
 var noti = document.getElementsByClassName('noti-icon')[0]
