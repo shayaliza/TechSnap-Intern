@@ -20,28 +20,31 @@ heading.addEventListener("click", () => {
 
 })
 
-var menu = document.getElementById('menu')
-var panel = document.getElementsByClassName('side-panel-container')[0]
-var close = document.getElementById('close')
-var body = document.getElementsByClassName("body")[0]
-var navi = document.getElementsByClassName("navigation")[0]
+const menu = document.getElementById('menu')
+const panel = document.getElementsByClassName('side-panel-container')[0]
+const close = document.getElementById('close')
+const body = document.getElementsByClassName("body")[0]
+const navi = document.getElementsByClassName("navigation")[0]
+const mainbody = document.body;
 
 menu.addEventListener("click", () => {
+    const overlay = document.getElementById('overlay');
+    mainbody.style.overflow = "hidden"
+    overlay.style.display = "block";
     panel.style.display = "block"
-    body.style.filter = "blur(10px)"
-    navi.style.filter = "blur(10px)"
-    document.body.style.overflow = "hidden"
-    overlay.style.display = 'block';
+    panel.style.zIndex = "100";
+    body.classList.add('blurred-background');
 
 })
 
 close.addEventListener("click", () => {
+const overlay = document.getElementById('overlay');
+    overlay.style.display = "none";
     panel.style.display = "none"
+    panel.style.zIndex = "1";
     body.style.filter = "none"
-    navi.style.filter = "none"
-    document.body.style.overflow = "scroll"
-    overlay.style.display = 'none';
-
+    mainbody.style.overflow = "scroll"
+    body.classList.remove('blurred-background');
 })
 
 var noti = document.getElementsByClassName('noti-icon')[0]
@@ -54,45 +57,37 @@ var noti_close = document.getElementsByClassName('notification-close')[0]
 
 noti.addEventListener("click", () => {
         noti_list.className = "notification-list-container noti-display"
-          body.style.filter = "blur(10px)"
-          body.style.position = "fixed"
-          body.style.overflow = "hidden"
-          navi.style.filter = "blur(10px)"
-          panel.style.filter = "blur(10px)"
+        const overlay = document.getElementById('overlay');
+        mainbody.style.overflow = 'hidden'
         overlay.style.display = 'block';
+        body.classList.add('blurred-background');
 
 })
 
 noti_close.addEventListener("click", () => {
     noti_list.className = "notification-list-container noti-notdisplay"
-          body.style.filter = "none"
-          body.style.position = "static"
-          navi.style.filter = "none"
-          panel.style.filter = "none"
+    const overlay = document.getElementById('overlay');
+    mainbody.style.overflow = 'scroll'
     overlay.style.display = 'none';
+    body.classList.remove('blurred-background');
 
 })
 
 profile.addEventListener("click", () => {
   
         prof_list.className = "profile-container prof-display"
-        body.style.filter = "blur(10px)"
-          body.style.position = "fixed"
-          body.style.overflow = "hidden"
-          navi.style.filter = "blur(10px)"
-          panel.style.filter = "blur(10px)"
+        const overlay = document.getElementById('overlay');
+        mainbody.style.overflow = 'hidden'
         overlay.style.display = 'block';
-
-
+        body.classList.add('blurred-background');
 })
 
 profile_close.addEventListener("click", () => {
 
     prof_list.className = "profile-container prof-notdisplay"
-          body.style.filter = "none"
-          body.style.position = "static"
-          navi.style.filter = "none"
-          panel.style.filter = "none"
+    const overlay = document.getElementById('overlay');
+    mainbody.style.overflow = 'scroll'
     overlay.style.display = 'none';
+    body.classList.remove('blurred-background');
 
 })
