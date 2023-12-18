@@ -139,7 +139,8 @@ textarea{
 #announcementModal,
 #linkModal,
 #fileModal,
-#youtubelinkModal{
+#youtubelinkModal,
+#addAssignmentModal{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -147,6 +148,9 @@ textarea{
     top: 10px;
 
 
+}
+#addAssignmentModals{
+    display: none;
 }
 #announcementModal{
     display: none;
@@ -175,6 +179,30 @@ textarea{
     color: #000;
 }
 
+
+/* Add assignment */
+
+.date-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.date-selector label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.date-selector input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addAssignmentDescription {
+    height: 120px;
+}
 
 /* Add Course */
 .add-course 

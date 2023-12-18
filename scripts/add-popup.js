@@ -46,6 +46,44 @@ document.addEventListener('DOMContentLoaded', function () {
     announcementDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere. '
     
 
+  // ============== Assignment popup =================
+
+  const addAssignmentModal = document.getElementById('addAssignmentModals');
+  const openAddAssignmentPopupBtn = document.getElementById('openAddAssignmentPopup');
+  const closeAddAssignmentModalBtn = document.getElementById('closeAddAssignmentPopup');
+  const addAssignmentHeadingInput = document.getElementById('addAssignmentHeading');
+  const addAssignmentDescriptionTextarea = document.getElementById('addAssignmentDescription');
+
+
+
+  // Function to open the modal
+  function openAddAssignmentModal() {
+      addAssignmentModal.style.display = 'block';
+      const overlay = document.getElementById('overlay');
+      mainbody.style.overflow = 'hidden'
+      overlay.style.display = 'block';
+      body.classList.add('blurred-background');
+  }
+
+  // Function to close the modal
+  function closeAddAssignmentModal() {
+      addAssignmentModal.style.display = 'none';
+      const overlay = document.getElementById('overlay');
+      mainbody.style.overflow = 'scroll'
+      overlay.style.display = 'none';
+      body.classList.remove('blurred-background');
+  }
+
+  // Event listener to open the modal when the button is clicked
+  openAddAssignmentPopupBtn.addEventListener('click', openAddAssignmentModal);
+
+  // Event listener to close the modal when the close button is clicked
+  closeAddAssignmentModalBtn.addEventListener('click', closeAddAssignmentModal);
+
+  addAssignmentHeadingInput.defaultValue='Assignment';
+  addAssignmentDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere. '
+  
+
     //================link popup =============
 
     const linkModal = document.getElementById('linkModal');
@@ -161,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-      //================link popup =============
+      //================youtube link popup =============
 
       const youtubelinkModal = document.getElementById('youtubelinkModal');
       const addyoutubeLinkBtn = document.getElementById('addyoutubeLinkBtn');
@@ -193,6 +231,4 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Event listener to close the modal when the close button is clicked
       closeyoutubeLinkModalBtn.addEventListener('click', closeyoutubeLinkModal);
-  
-
 });
