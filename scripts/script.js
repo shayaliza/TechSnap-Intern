@@ -20,29 +20,27 @@ heading.addEventListener("click", () => {
 
 })
 
-const menu = document.getElementById('menu')
-const panel = document.getElementsByClassName('side-panel-container')[0]
-const close = document.getElementById('close')
-const body = document.getElementsByClassName("body")[0]
-const navi = document.getElementsByClassName("navigation")[0]
-const mainbody = document.body;
+var menu = document.getElementById('menu')
+var panel = document.getElementsByClassName('side-panel-container')[0]
+var close = document.getElementById('close')
+var body = document.getElementsByClassName("body")[0]
+var navi = document.getElementsByClassName("navigation")[0]
 
 menu.addEventListener("click", () => {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = "block";
     panel.style.display = "block"
-    panel.style.zIndex = "100"
-    mainbody.style.overflow = "hidden"
-    mainbody.classList.add('blurred-background');
+    body.style.filter = "blur(10px)"
+    navi.style.filter = "blur(10px)"
+    document.body.style.overflow = "hidden"
+    overlay.style.display = 'block';
 
 })
 
 close.addEventListener("click", () => {
-const overlay = document.getElementById('overlay');
-    overlay.style.display = "none";
     panel.style.display = "none"
-    mainbody.style.overflow = "auto"
-    mainbody.classList.remove('blurred-background');
+    body.style.filter = "none"
+    navi.style.filter = "none"
+    document.body.style.overflow = "scroll"
+    overlay.style.display = 'none';
 
 })
 
@@ -56,37 +54,49 @@ var noti_close = document.getElementsByClassName('notification-close')[0]
 
 noti.addEventListener("click", () => {
         noti_list.className = "notification-list-container noti-display"
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        body.style.overflow = "hidden"
+        navi.style.filter = "blur(10px)"
+        panel.style.pointerEvents = 'none';
+        panel.style.filter = "blur(10px)"
         overlay.style.display = 'block';
-        body.classList.add('blurred-background');
 
 })
 
 noti_close.addEventListener("click", () => {
     noti_list.className = "notification-list-container noti-notdisplay"
-    const overlay = document.getElementById('overlay');
-    mainbody.style.overflow = 'scroll'
+    body.style.filter = "none"
+    body.style.position = "static"
+    navi.style.filter = "none"
+    panel.style.pointerEvents = 'auto';
+    panel.style.filter = "none"
     overlay.style.display = 'none';
-    body.classList.remove('blurred-background');
 
 })
 
 profile.addEventListener("click", () => {
-  
+
         prof_list.className = "profile-container prof-display"
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        body.style.overflow = "hidden"
+        navi.style.filter = "blur(10px)"
+        panel.style.pointerEvents = 'none';
+        panel.style.filter = "blur(10px)"
         overlay.style.display = 'block';
-        body.classList.add('blurred-background');
+
+
 })
 
 profile_close.addEventListener("click", () => {
 
     prof_list.className = "profile-container prof-notdisplay"
-    const overlay = document.getElementById('overlay');
-    mainbody.style.overflow = 'scroll'
+    body.style.filter = "none"
+    body.style.position = "static"
+    navi.style.filter = "none"
+    panel.style.pointerEvents = 'auto';
+    panel.style.filter = "none"
     overlay.style.display = 'none';
-    body.classList.remove('blurred-background');
 
 })

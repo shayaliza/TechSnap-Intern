@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const overlay = document.getElementsByClassName('overlay')[0];
-    
+    const overlay = document.getElementById('overlay');
+
     var body = document.getElementsByClassName('body')[0]
     var navi = document.getElementsByClassName("navigation")[0]
     var panel = document.getElementsByClassName("side-panel-container")[0]
-    const mainbody = document.body;
-
 
     // ============== announcement popup =================
 
@@ -21,19 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to open the modal
     function openAnouncementModal() {
         announcementModal.style.display = 'block';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
         overlay.style.display = 'block';
-        body.classList.add('blurred-background');
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closeAnnouncementModal() {
         announcementModal.style.display = 'none';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'scroll'
         overlay.style.display = 'none';
-        body.classList.remove('blurred-background');
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
     }
 
     // Event listener to open the modal when the button is clicked
@@ -44,45 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     announcementHeadingInput.defaultValue='Announcement';
     announcementDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere. '
-    
 
-  // ============== Assignment popup =================
-
-  const addAssignmentModal = document.getElementById('addAssignmentModals');
-  const openAddAssignmentPopupBtn = document.getElementById('openAddAssignmentPopup');
-  const closeAddAssignmentModalBtn = document.getElementById('closeAddAssignmentPopup');
-  const addAssignmentHeadingInput = document.getElementById('addAssignmentHeading');
-  const addAssignmentDescriptionTextarea = document.getElementById('addAssignmentDescription');
-
-
-
-  // Function to open the modal
-  function openAddAssignmentModal() {
-      addAssignmentModal.style.display = 'block';
-      const overlay = document.getElementById('overlay');
-      mainbody.style.overflow = 'hidden'
-      overlay.style.display = 'block';
-      body.classList.add('blurred-background');
-  }
-
-  // Function to close the modal
-  function closeAddAssignmentModal() {
-      addAssignmentModal.style.display = 'none';
-      const overlay = document.getElementById('overlay');
-      mainbody.style.overflow = 'scroll'
-      overlay.style.display = 'none';
-      body.classList.remove('blurred-background');
-  }
-
-  // Event listener to open the modal when the button is clicked
-  openAddAssignmentPopupBtn.addEventListener('click', openAddAssignmentModal);
-
-  // Event listener to close the modal when the close button is clicked
-  closeAddAssignmentModalBtn.addEventListener('click', closeAddAssignmentModal);
-
-  addAssignmentHeadingInput.defaultValue='Assignment';
-  addAssignmentDescriptionTextarea.defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laborum eaque sequi, quod quam earum a cum maiores iusto facere. '
-  
 
     //================link popup =============
 
@@ -95,19 +57,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to open the modal
     function openLinkModal() {
         linkModal.style.display = 'block';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
         overlay.style.display = 'block';
-        body.classList.add('blurred-background');
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        body.style.overflow = "hidden"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closeLinkModal() {
         linkModal.style.display = 'none';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'scroll'
         overlay.style.display = 'none';
-        body.classList.remove('blurred-background');
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
 
     }
 
@@ -129,19 +94,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to open the modal
     function openfileModal() {
         fileModal.style.display = 'block';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
         overlay.style.display = 'block';
-        body.classList.add('blurred-background');
+        body.style.filter = "blur(10px)"
+        body.style.position = "fixed"
+        navi.style.filter = "blur(10px)"
+        panel.style.filter = "blur(10px)"
     }
 
     // Function to close the modal
     function closefileModal() {
         fileModal.style.display = 'none';
-        const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'scroll'
         overlay.style.display = 'none';
-        body.classList.remove('blurred-background');
+        body.style.filter = "none"
+        body.style.position = "static"
+        navi.style.filter = "none"
+        panel.style.filter = "none"
 
     }
 
@@ -199,36 +166,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-      //================youtube link popup =============
+      //================link popup =============
 
       const youtubelinkModal = document.getElementById('youtubelinkModal');
       const addyoutubeLinkBtn = document.getElementById('addyoutubeLinkBtn');
       const closeyoutubeLinkModalBtn = document.getElementById('closeyoutubeLinkModal');
-  
-  
-  
+
+
+
       // Function to open the modal
       function openyoutubeLinkModal() {
           youtubelinkModal.style.display = 'block';
-          const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'hidden'
-        overlay.style.display = 'block';
-        body.classList.add('blurred-background');
+          overlay.style.display = 'block';
+          body.style.filter = "blur(10px)"
+          body.style.position = "fixed"
+          body.style.overflow = "hidden"
+          navi.style.filter = "blur(10px)"
+          panel.style.filter = "blur(10px)"
       }
-  
+
       // Function to close the modal
       function closeyoutubeLinkModal() {
           youtubelinkModal.style.display = 'none';
-          const overlay = document.getElementById('overlay');
-        mainbody.style.overflow = 'scroll'
-        overlay.style.display = 'none';
-        body.classList.remove('blurred-background');
-  
+          overlay.style.display = 'none';
+          body.style.filter = "none"
+          body.style.position = "static"
+          navi.style.filter = "none"
+          panel.style.filter = "none"
+
       }
-  
+
       // Event listener to open the modal when the button is clicked
       addyoutubeLinkBtn.addEventListener('click', openyoutubeLinkModal);
-  
+
       // Event listener to close the modal when the close button is clicked
       closeyoutubeLinkModalBtn.addEventListener('click', closeyoutubeLinkModal);
+
+
 });

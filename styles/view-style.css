@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
 }
-.view-item 
+.view-item
 {
     margin: 10px 30px;
 }
@@ -47,11 +47,11 @@
     display: flex;
     align-items: center;
 }
-.release-edit div 
+.release-edit div
 {
     padding: 10px;
 }
-.release-btn, .edit-btn 
+.release-btn, .edit-btn
 {
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@
     font-size: 15px;
     letter-spacing: 1px;
 }
-.links .heading .head, .docs .heading .head 
+.links .heading .head, .docs .heading .head
 {
     background: none;
 }
@@ -134,14 +134,14 @@
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,   rgba(116,182,247,1) 0% , rgba(171,102,255,1) 90%);
 }
-.dustbin 
+.dustbin
 {
     width: 16px;
     height: 16px;
     margin-left: 10px;
     margin-top: 6px;
 }
-.link-name 
+.link-name
 {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(162, 88, 253) 0%, rgba(116,182,247,1) 90% );
     background-size: 0% 2px;
@@ -150,17 +150,17 @@
     transition: background-size 300ms ease;
     font-size: 15px;
 }
-.link-name:hover 
+.link-name:hover
 {
     background-size: 100% 2px;
 }
-li 
+li
 {
     display: flex;
     align-items: center;
     padding: 3px 0px;
 }
-li span a 
+li span a
 {
     color: rgb(30,30,30);
 }
@@ -196,9 +196,8 @@ li span a
     {
         flex-direction: column;
     }
-    .links .heading, .docs .heading 
+    .links .heading, .docs .heading
     {
         flex-direction: row;
     }
 }
-
