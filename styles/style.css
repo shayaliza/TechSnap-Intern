@@ -64,7 +64,7 @@ a
     color: white;
     font-size: 17px;
 }
-#arrow
+.arrow
 {
     width: 20px;
     height: 20px;
@@ -444,7 +444,7 @@ a
     overflow: auto;
     overflow-anchor: none;
 
-}
+} 
 
 /* media queries */
 @media(max-width: 1024px)

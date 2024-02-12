@@ -192,12 +192,17 @@ th:nth-child(5)
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    cursor: pointer;
+}
+.active-num{
+    font-weight: 600;
 }
 .page-num p
 {
     padding: 2px 8px;
     margin: 3px;
     font-size: 14px;
+    cursor: pointer;
 }
 .bracket 
 {
@@ -206,10 +211,9 @@ th:nth-child(5)
     color: white;
     border-radius: 3px;
 }
-.page-num p:nth-child(2)
-{
-    font-weight: bold;
-}
+
+.items
+
 .public-table, .private-table
 {
     display: none;
