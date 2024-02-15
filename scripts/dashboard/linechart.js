@@ -7,8 +7,8 @@ const data = {
 		{
 			label: "My Dataset",
 			data: [65, 59, 80, 81, 56, 55],
-			backgroundColor: "rgba(255, 43, 96,0.1)",
-			borderColor: "rgb(255, 43, 96)",
+			backgroundColor: "rgba(22, 75, 128,0.1)",
+			borderColor: "rgb(22, 75, 128)",
 			pointRadius: 5,
 			pointHoverRadius: 10,
 		},
@@ -33,6 +33,5 @@ const config = {
 		},
 	},
 };
-
 
 const lineChart = new Chart(ctx, config);

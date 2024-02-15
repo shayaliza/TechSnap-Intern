@@ -290,23 +290,55 @@
 
 			<section class="charts">
 				<div class="chart-container">
-					
 					<div id="line-container">
-						<canvas id="lineChart"></canvas>
+						<canvas id="lineChart" width="100%"></canvas>
 					</div>
 
 					<div class="right-charts">
-						<div class="">
-							<h1>Lorem ipsum</h1>
+						<h2>Personal Records</h2>
+						<div class="right-progress">
+							<canvas id="progressChart" height="250px" width="250px"> </canvas>
+						</div>
+						<div class="right-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Column 1</th>
+										<th>Column 2</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Lorem</td>
+										<td>Rsdf</td>
+									</tr>
+									<tr>
+										<td>Something</td>
+										<td>Rsg</td>
+									</tr>
+									<tr>
+										<td>Progress</td>
+										<td>hsdfh</td>
+									</tr>
+									<tr>
+										<td>Followers</td>
+										<td>32</td>
+									</tr>
+									<tr>
+										<td>Question solved</td>
+										<td>500</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 
 					<div id="doughnut-container">
-						<canvas id="doughnutChart"></canvas>
+						<canvas id="doughnutChart" width="220px"></canvas>
 					</div>
 
 					<div class="bar-container">
-						<canvas id="barChart"></canvas>
+						<canvas id="barChart" height="250px" width="250px"></canvas>
 					</div>
 				</div>
 			</section>
@@ -316,5 +348,6 @@
 		<script src="scripts/dashboard/linechart.js"></script>
 		<script src="scripts/dashboard/barchart.js"></script>
 		<script src="scripts/dashboard/doughnut.js"></script>
+		<script src="scripts/dashboard/progress.js"></script>
 	</body>
 </html>

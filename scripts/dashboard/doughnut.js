@@ -7,14 +7,14 @@ const data3 = {
 		{
 			data: [50, 25, 25], // Update data values here
 			backgroundColor: [
-				"rgba(255, 99, 132, 1)",
-				"rgba(54, 162, 235, 1)",
-				"rgba(255, 205, 86, 1)",
+				"rgba(22, 75, 128, 1)",
+				"rgba(181, 42, 24, 1)",
+				"rgba(59, 138, 68, 1)",
 			],
 			hoverBackgroundColor: [
-				"rgba(255, 99, 132, 0.8)",
-				"rgba(54, 162, 235, 0.8)",
-				"rgba(255, 205, 86, 0.8)",
+				"rgba(22, 75, 128, 0.8)",
+				"rgba(181, 42, 24, 0.8)",
+				"rgba(59, 138, 68, 0.8)",
 			],
 		},
 	],

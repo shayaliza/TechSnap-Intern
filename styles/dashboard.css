@@ -77,25 +77,84 @@ h2 {
 
 #lineChart {
 	width: 100%;
+	margin: auto;
 }
 
 .right-charts {
 	grid-column: 3/4;
 	grid-row: span 2;
 	background-color: white;
+	padding: 20px;
 }
 
 .bar-container {
 	/* width: 300px; */
-	/* height: auto; */
+	/* height: 250px; */
 	background-color: white;
 	padding: 20px;
 	align-items: center;
 }
 
+#barChart {
+	margin: auto;
+}
+
+#doughnutChart {
+	margin: auto;
+}
+
 #doughnut-container {
-	/* width: 300px; */
-	height: auto;
+	grid-column: 1/2;
 	background-color: white;
-	padding: 20px;
+	padding-top: 2rem;
+}
+table {
+	border-collapse: collapse;
+	margin: 20px;
+	margin: auto;
+}
+
+th,
+td {
+	border: 1px solid #072e61;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #0e3672;
+	color: white;
+}
+
+.right-progress {
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+	.body {
+		padding-left: 0px;
+	}
+}
+
+@media (max-width: 900px) {
+	.chart-container {
+		grid-template-columns: 1fr 1fr;
+	}
+	#line-container {
+	}
+	.right-charts {
+		grid-column: 2/3;
+		order: 1;
+	}
+	.bar-container {
+		grid-column: 1/2;
+    order: 2;
+	}
+	#doughnut-container {
+		grid-column: 1/2;
+	}
 }
