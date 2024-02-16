@@ -152,7 +152,7 @@ th {
 	}
 	.bar-container {
 		grid-column: 1/2;
-    order: 2;
+		order: 2;
 	}
 	#doughnut-container {
 		grid-column: 1/2;
