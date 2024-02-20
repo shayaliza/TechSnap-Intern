@@ -1,5 +1,6 @@
 .body {
 	padding-top: 70px;
+	padding-left: 90px;
 	padding-bottom: 20px;
 	display: flex;
 	justify-content: center;
@@ -7,7 +8,7 @@
 }
 
 .left-container {
-	width: 300px;
+	width: 250px;
 }
 .left-top {
 	display: flex;

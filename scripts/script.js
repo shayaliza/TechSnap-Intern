@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// 	panel.style.display = "block";
 	// 	panel.style.zIndex = "1000";
 	// 	body.style.filter = "blur(10px)";
-	// 	navi.style.filter = "blur(10px)";
+	// navi.style.filter = "blur(10px)";
 	// 	// document.body.style.overflow = "hidden";
 	// 	overlay.style.display = "block";
 	// });
@@ -55,24 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const body = document.querySelector("body"),
 		sidebar = body.querySelector("nav"),
-		toggle = body.querySelector(".toggle"),
-		searchBtn = body.querySelector(".search-box"),
-		modeSwitch = body.querySelector(".toggle-switch"),
-		modeText = body.querySelector(".mode-text");
+		toggle = body.querySelector(".toggle");
+
 	toggle.addEventListener("click", () => {
 		sidebar.classList.toggle("close");
-	});
-	searchBtn.addEventListener("click", () => {
-		sidebar.classList.remove("close");
-	});
-	modeSwitch.addEventListener("click", () => {
-		body.classList.toggle("dark");
-
-		if (body.classList.contains("dark")) {
-			modeText.innerText = "Light mode";
-		} else {
-			modeText.innerText = "Dark mode";
-		}
 	});
 
 	var noti = document.getElementsByClassName("noti-icon")[0];
@@ -84,42 +70,43 @@ document.addEventListener("DOMContentLoaded", function () {
 	var profile_close = document.getElementsByClassName("profile-close")[0];
 	var prof_list = document.getElementsByClassName("profile-container")[0];
 	var noti_close = document.getElementsByClassName("notification-close")[0];
+	let bodyContainer = document.querySelector(".body");
 
 	noti.addEventListener("click", () => {
 		noti_list.className = "notification-list-container noti-display";
-		body.style.filter = "blur(10px)";
-		body.style.overflow = "hidden";
-		navi.style.filter = "blur(10px)";
-		panel.style.pointerEvents = "none";
-		panel.style.filter = "blur(10px)";
+		bodyContainer.style.filter = "blur(10px)";
+		bodyContainer.style.overflow = "hidden";
+		sidebar.style.filter = "blur(10px)";
+		// panel.style.pointerEvents = "none";
+		// panel.style.filter = "blur(10px)";
 		overlay.style.display = "block";
 	});
 
 	noti_close.addEventListener("click", () => {
 		noti_list.className = "notification-list-container noti-notdisplay";
-		body.style.filter = "none";
-		navi.style.filter = "none";
-		panel.style.pointerEvents = "auto";
-		panel.style.filter = "none";
+		bodyContainer.style.filter = "none";
+		sidebar.style.filter = "none";
+		// panel.style.pointerEvents = "auto";
+		// panel.style.filter = "none";
 		overlay.style.display = "none";
 	});
 
 	profile.addEventListener("click", () => {
 		prof_list.className = "profile-container prof-display";
-		body.style.filter = "blur(10px)";
-		body.style.overflow = "hidden";
-		navi.style.filter = "blur(10px)";
-		panel.style.pointerEvents = "none";
-		panel.style.filter = "blur(10px)";
+		bodyContainer.style.filter = "blur(10px)";
+		bodyContainer.style.overflow = "hidden";
+		sidebar.style.filter = "blur(10px)";
+		// panel.style.pointerEvents = "none";
+		// panel.style.filter = "blur(10px)";
 		overlay.style.display = "block";
 	});
 
 	profile_close.addEventListener("click", () => {
 		prof_list.className = "profile-container prof-notdisplay";
-		body.style.filter = "none";
-		navi.style.filter = "none";
-		panel.style.pointerEvents = "auto";
-		panel.style.filter = "none";
+		bodyContainer.style.filter = "none";
+		sidebar.style.filter = "none";
+		// panel.style.pointerEvents = "auto";
+		// panel.style.filter = "none";
 		overlay.style.display = "none";
 	});
 });
