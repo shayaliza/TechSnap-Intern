@@ -1,56 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const overlay = document.querySelector(".overlay");
 
-	var arrows = document.querySelectorAll(".arrow");
-	var headings = document.querySelectorAll(".panel-heading");
-	var detailsList = document.querySelectorAll(".details");
+	// var arrows = document.querySelectorAll(".arrow");
+	// var headings = document.querySelectorAll(".panel-heading");
+	// var detailsList = document.querySelectorAll(".details");
 
-	var headingsArray = Array.from(headings);
+	// var headingsArray = Array.from(headings);
 
-	var eventListeners = headingsArray.map(function (heading, index) {
-		return function () {
-			var arrow = arrows[index];
-			var details = detailsList[index];
+	// var eventListeners = headingsArray.map(function (heading, index) {
+	// 	return function () {
+	// 		var arrow = arrows[index];
+	// 		var details = detailsList[index];
 
-			if (arrow.className === "down") {
-				arrow.className = "up";
-				details.style.display = "none";
-				arrow.style.content = "url('rsc/icons8-chevron-up-30.png')";
-			} else {
-				arrow.className = "down";
-				details.style.display = "block";
-				arrow.style.content = "url('rsc/icons8-chevron-down-30.png')";
-			}
-		};
+	// 		if (arrow.className === "down") {
+	// 			arrow.className = "up";
+	// 			details.style.display = "none";
+	// 			arrow.style.content = "url('rsc/icons8-chevron-up-30.png')";
+	// 		} else {
+	// 			arrow.className = "down";
+	// 			details.style.display = "block";
+	// 			arrow.style.content = "url('rsc/icons8-chevron-down-30.png')";
+	// 		}
+	// 	};
+	// });
+
+	// // Attach the event listeners to the headings
+	// eventListeners.forEach(function (listener, index) {
+	// 	headingsArray[index].addEventListener("click", listener);
+	// });
+
+	// var menu = document.getElementById("menu");
+	// var panel = document.getElementsByClassName("side-panel-container")[0];
+	// var close = document.getElementById("close");
+	// var body = document.getElementsByClassName("body")[0];
+	// var navi = document.getElementsByClassName("navigation")[0];
+
+	// menu.addEventListener("click", () => {
+	// 	panel.style.display = "block";
+	// 	panel.style.zIndex = "1000";
+	// 	body.style.filter = "blur(10px)";
+	// 	navi.style.filter = "blur(10px)";
+	// 	// document.body.style.overflow = "hidden";
+	// 	overlay.style.display = "block";
+	// });
+
+	// close.addEventListener("click", () => {
+	// 	panel.style.display = "none";
+	// 	panel.style.zIndex = "1";
+	// 	body.style.filter = "none";
+	// 	navi.style.filter = "none";
+	// 	// document.body.style.overflow = "scroll";
+	// 	overlay.style.display = "none";
+	// });
+
+	const body = document.querySelector("body"),
+		sidebar = body.querySelector("nav"),
+		toggle = body.querySelector(".toggle"),
+		searchBtn = body.querySelector(".search-box"),
+		modeSwitch = body.querySelector(".toggle-switch"),
+		modeText = body.querySelector(".mode-text");
+	toggle.addEventListener("click", () => {
+		sidebar.classList.toggle("close");
 	});
-
-	// Attach the event listeners to the headings
-	eventListeners.forEach(function (listener, index) {
-		headingsArray[index].addEventListener("click", listener);
+	searchBtn.addEventListener("click", () => {
+		sidebar.classList.remove("close");
 	});
+	modeSwitch.addEventListener("click", () => {
+		body.classList.toggle("dark");
 
-	var menu = document.getElementById("menu");
-	var panel = document.getElementsByClassName("side-panel-container")[0];
-	var close = document.getElementById("close");
-	var body = document.getElementsByClassName("body")[0];
-	var navi = document.getElementsByClassName("navigation")[0];
-
-	menu.addEventListener("click", () => {
-		panel.style.display = "block";
-		panel.style.zIndex = "1000";
-		body.style.filter = "blur(10px)";
-		navi.style.filter = "blur(10px)";
-		// document.body.style.overflow = "hidden";
-		overlay.style.display = "block";
-	});
-
-	close.addEventListener("click", () => {
-		panel.style.display = "none";
-		panel.style.zIndex = "1";
-		body.style.filter = "none";
-		navi.style.filter = "none";
-		// document.body.style.overflow = "scroll";
-		overlay.style.display = "none";
+		if (body.classList.contains("dark")) {
+			modeText.innerText = "Light mode";
+		} else {
+			modeText.innerText = "Dark mode";
+		}
 	});
 
 	var noti = document.getElementsByClassName("noti-icon")[0];

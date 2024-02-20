@@ -92,11 +92,16 @@
 }
 
 .view-container {
-	background-color: rgb(150, 173, 194);
+	background-color: rgb(216, 224, 231);
 	overflow: scroll;
 	height: 80vh;
 	padding: 10px 0;
 }
 .view-container::-webkit-scrollbar {
 	display: none;
+}
+
+.heading-item {
+	display: flex;
+	gap: 10px;
 }
