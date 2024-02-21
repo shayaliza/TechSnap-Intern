@@ -16,7 +16,10 @@
 // 		});
 // 	});
 // });
+
 document.addEventListener("DOMContentLoaded", function () {
+
+
 	const unitBtns = document.querySelectorAll(".unit-show-img");
 	const unit_content = document.querySelectorAll(".unit-content");
 
@@ -35,4 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
+
+	
 });

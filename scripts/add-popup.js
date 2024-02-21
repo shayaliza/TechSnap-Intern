@@ -186,4 +186,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listener to close the modal when the close button is clicked
 	closeyoutubeLinkModalBtn.addEventListener("click", closeyoutubeLinkModal);
+
+	// ============== Add unit popup =================
+
+	const addUnitModal = document.getElementById("addUnitModal");
+	const openAddUnitPopupBtn = document.getElementById("openAddUnitPopup");
+	const closeAddUnitModalBtn = document.getElementById("closeAddUnitPopup");
+
+
+	// Function to open the modal
+	function openAddUnitModal() {
+		addUnitModal.style.display = "block";
+		overlay.style.display = "block";
+		body.style.filter = "blur(10px)";
+		navi.style.filter = "blur(10px)";
+		panel.style.filter = "blur(10px)";
+	}
+
+	// Function to close the modal
+	function closeaddUnitModal() {
+		addUnitModal.style.display = "none";
+		overlay.style.display = "none";
+		body.style.filter = "none";
+		navi.style.filter = "none";
+		panel.style.filter = "none";
+	}
+
+	// Event listener to open the modal when the button is clicked
+	openAddUnitPopupBtn.addEventListener("click", openAddUnitModal);
+
+	// Event listener to close the modal when the close button is clicked
+	closeAddUnitModalBtn.addEventListener("click", closeaddUnitModal);
 });

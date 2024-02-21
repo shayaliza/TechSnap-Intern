@@ -73,7 +73,7 @@
 	align-items: center;
 	gap: 15px;
 	padding-top: 2px;
-	padding-left: 10px;
+	/* padding-left: 10px; */
 }
 
 .unit-lessons img,
