@@ -193,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	const openAddUnitPopupBtn = document.getElementById("openAddUnitPopup");
 	const closeAddUnitModalBtn = document.getElementById("closeAddUnitPopup");
 
-
 	// Function to open the modal
 	function openAddUnitModal() {
 		addUnitModal.style.display = "block";
@@ -217,4 +216,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listener to close the modal when the close button is clicked
 	closeAddUnitModalBtn.addEventListener("click", closeaddUnitModal);
+
+
+
+
 });
