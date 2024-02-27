@@ -216,8 +216,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listener to close the modal when the close button is clicked
 	closeAddUnitModalBtn.addEventListener("click", closeaddUnitModal);
-
-
-
-
+	
 });

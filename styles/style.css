@@ -17,7 +17,7 @@ a {
 }
 /* Side Panel */
 .side-panel-container {
-	width: 250px;
+	width: 210px;
 	position: fixed;
 	height: 100%;
 	background: rgb(4, 60, 124);
@@ -394,7 +394,7 @@ a {
 }
 
 /* media queries */
-@media (max-width: 1824px) {
+@media (max-width: 1024px) {
 	.side-panel-container {
 		display: none;
 		width: 300px;

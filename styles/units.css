@@ -1,6 +1,6 @@
 .body {
+	padding-left: 210px;
 	padding-top: 70px;
-	padding-left: 90px;
 	padding-bottom: 20px;
 	display: flex;
 	justify-content: center;
@@ -9,6 +9,7 @@
 
 .left-container {
 	width: 250px;
+	margin-left: 20px;
 }
 .left-top {
 	display: flex;
@@ -89,6 +90,7 @@
 
 .right-container {
 	margin-top: 0.5rem;
+	margin-right: 20px;
 	/* color: white; */
 }
 

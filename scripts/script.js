@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			var arrow = arrows[index];
 			var details = detailsList[index];
 
-			if (arrow.className === "down") {
+			if (arrow.classList.contains("down")) {
 				arrow.className = "up";
 				details.style.display = "none";
 				arrow.style.content = "url('rsc/icons8-chevron-up-30.png')";
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		panel.style.display = "block";
 		panel.style.zIndex = "1000";
 		body.style.filter = "blur(10px)";
-	navi.style.filter = "blur(10px)";
+		navi.style.filter = "blur(10px)";
 		// document.body.style.overflow = "hidden";
 		overlay.style.display = "block";
 	});
@@ -52,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		// document.body.style.overflow = "scroll";
 		overlay.style.display = "none";
 	});
-
-	
 
 	var noti = document.getElementsByClassName("noti-icon")[0];
 	var noti_list = document.getElementsByClassName(
