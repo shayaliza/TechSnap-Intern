@@ -144,6 +144,10 @@ textarea {
 	justify-content: space-around;
 }
 
+.delete-item{
+    cursor: pointer;
+}
+
 /* file popup */
 #fileToUpload {
 	margin-top: 0.5rem;

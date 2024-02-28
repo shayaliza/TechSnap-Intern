@@ -224,10 +224,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	let releasePopup = document.querySelector("#releasePopup");
 
 	releasePopupBtn.addEventListener("click", (e) => {
-
 		releasePopup.style.display = "block";
 		panel.style.filter = "blur(10px)";
-		panel.style.zIndex = "1000";
 		body.style.filter = "blur(10px)";
 		navi.style.filter = "blur(10px)";
 		overlay.style.display = "block";
@@ -237,7 +235,29 @@ document.addEventListener("DOMContentLoaded", function () {
 		releasePopup.style.display = "none";
 
 		panel.style.filter = "none";
-		panel.style.zIndex = "1";
+		body.style.filter = "none";
+		navi.style.filter = "none";
+		overlay.style.display = "none";
+	});
+
+	// ============    delete item popup    ============
+
+	const deleteItemBtn = document.querySelector(".delete-item");
+	let deleteItemClose = document.querySelector("#deleteItemClose");
+	let deleteItem = document.querySelector("#deleteItem");
+
+	deleteItemBtn.addEventListener("click", (e) => {
+		deleteItem.style.display = "block";
+		panel.style.filter = "blur(10px)";
+		body.style.filter = "blur(10px)";
+		navi.style.filter = "blur(10px)";
+		overlay.style.display = "block";
+	});
+
+	deleteItemClose.addEventListener("click", (e) => {
+		deleteItem.style.display = "none";
+
+		panel.style.filter = "none";
 		body.style.filter = "none";
 		navi.style.filter = "none";
 		overlay.style.display = "none";
