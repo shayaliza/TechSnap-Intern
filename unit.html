@@ -221,12 +221,196 @@
 			</div>
 		</div>
 
+		<!-- relese popup -->
+		<div class="modal flex" id="releasePopup">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Release Unit</h5>
+							<div type="button" class="close" id="releasePopupClose">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>RELEASE this unit</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Unit option popup -->
 		<div class="popup-container" id="unitpopupoption">
-			<div class="popup-option">make draft</div>
-			<div class="popup-option">edit details</div>
-			<div class="popup-option">add lesson</div>
-			<div class="popup-option">archive</div>
+			<div class="popup-option" id="draft">make draft</div>
+			<div class="popup-option" id="edit-details">edit details</div>
+			<div class="popup-option" id="add-lesson">add lesson</div>
+			<div class="popup-option" id="archive-option">archive</div>
+		</div>
+
+		<!-- make draft popup -->
+
+		<div class="modal flex" id="makeDraft">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Make draft</h5>
+							<div type="button" class="close" id="makeDraftClose">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>Make draft</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- edit details popup -->
+
+		<div class="modal flex" id="editDetails">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Edit details</h5>
+							<div type="button" class="close" id="editDetailsClose">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>Edit details</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- add lessons popup -->
+
+		<div class="modal flex" id="addLessons">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Add Lesson</h5>
+							<div type="button" class="close" id="addLessonsClose">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>ADD LESSON</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- archive popup -->
+
+		<div class="modal flex" id="archiveItem">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Make archive</h5>
+							<div type="button" class="close" id="archiveItemClose">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>ARCHIVE this item</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- delete popup -->
+		<div class="modal flex" id="deleteItem">
+			<div class="modal-container">
+				<div class="left">
+					<div class="left-cont">
+						<img
+							src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="modal-box">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Delete item</h5>
+							<div type="button" class="close">&times;</div>
+						</div>
+
+						<div class="modal-body">
+							<h3>Are you sure you want to <span>DELETE this item</span>?</h3>
+						</div>
+						<div class="modal-button">
+							<button type="button" class="gradient-btn">Yes</button>
+							<button type="button" class="gradient-btn">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="notification-list-container noti-notdisplay">
@@ -560,7 +744,7 @@
 					</div>
 
 					<div class="release-edit heading-item">
-						<div class="release">
+						<div class="release" id="releaseUnit">
 							<button class="release-btn">
 								<img src="rsc/icons8-telegram-app-30.png" alt="" class="icon" />
 								<p>Release</p>

@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const overlay = document.querySelector(".overlay");
 
-	var arrows = document.querySelectorAll(".arrow");
-	var headings = document.querySelectorAll(".panel-heading");
-	var detailsList = document.querySelectorAll(".details");
+	let arrows = document.querySelectorAll(".arrow");
+	let headings = document.querySelectorAll(".panel-heading");
+	let detailsList = document.querySelectorAll(".details");
 
-	var headingsArray = Array.from(headings);
+	let headingsArray = Array.from(headings);
 
-	var eventListeners = headingsArray.map(function (heading, index) {
+	let eventListeners = headingsArray.map(function (heading, index) {
 		return function () {
-			var arrow = arrows[index];
-			var details = detailsList[index];
+			let arrow = arrows[index];
+			let details = detailsList[index];
 
 			if (arrow.classList.contains("down")) {
 				arrow.className = "up";
@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		headingsArray[index].addEventListener("click", listener);
 	});
 
-	var menu = document.getElementById("menu");
-	var panel = document.getElementsByClassName("side-panel-container")[0];
-	var close = document.getElementById("close");
-	var body = document.getElementsByClassName("body")[0];
-	var navi = document.getElementsByClassName("navigation")[0];
+	let menu = document.getElementById("menu");
+	let panel = document.getElementsByClassName("side-panel-container")[0];
+	let close = document.getElementById("close");
+	let body = document.getElementsByClassName("body")[0];
+	let navi = document.getElementsByClassName("navigation")[0];
 
 	menu.addEventListener("click", () => {
 		panel.style.display = "block";
@@ -53,15 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		overlay.style.display = "none";
 	});
 
-	var noti = document.getElementsByClassName("noti-icon")[0];
-	var noti_list = document.getElementsByClassName(
+	let noti = document.getElementsByClassName("noti-icon")[0];
+	let noti_list = document.getElementsByClassName(
 		"notification-list-container"
 	)[0];
 
-	var profile = document.getElementsByClassName("image")[0];
-	var profile_close = document.getElementsByClassName("profile-close")[0];
-	var prof_list = document.getElementsByClassName("profile-container")[0];
-	var noti_close = document.getElementsByClassName("notification-close")[0];
+	let profile = document.getElementsByClassName("image")[0];
+	let profile_close = document.getElementsByClassName("profile-close")[0];
+	let prof_list = document.getElementsByClassName("profile-container")[0];
+	let noti_close = document.getElementsByClassName("notification-close")[0];
 	let bodyContainer = document.querySelector(".body");
 
 	noti.addEventListener("click", () => {

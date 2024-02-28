@@ -216,5 +216,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listener to close the modal when the close button is clicked
 	closeAddUnitModalBtn.addEventListener("click", closeaddUnitModal);
-	
+
+	// ============    release popup    ============
+
+	const releasePopupBtn = document.querySelector("#releaseUnit");
+	let releasePopupClose = document.querySelector("#releasePopupClose");
+	let releasePopup = document.querySelector("#releasePopup");
+
+	releasePopupBtn.addEventListener("click", (e) => {
+
+		releasePopup.style.display = "block";
+		panel.style.filter = "blur(10px)";
+		panel.style.zIndex = "1000";
+		body.style.filter = "blur(10px)";
+		navi.style.filter = "blur(10px)";
+		overlay.style.display = "block";
+	});
+
+	releasePopupClose.addEventListener("click", (e) => {
+		releasePopup.style.display = "none";
+
+		panel.style.filter = "none";
+		panel.style.zIndex = "1";
+		body.style.filter = "none";
+		navi.style.filter = "none";
+		overlay.style.display = "none";
+	});
 });
