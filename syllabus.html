@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/announcements-style.css">
+    <link rel="stylesheet" href="styles/add-popup.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="rsc/icons8-project-management-48.png">
     <title>Syllabus</title>
 </head>
 <body>
+    <!-- Assignment add popup -->
+    <div class="modal flex-modal" id="addAssignmentModals">
+        <div class="modal-container">
+            <div class="left">
+                <div class="left-cont">
+                    <img src="https://images.unsplash.com/photo-1602578558883-a40f8c22b3a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzJTIwYWRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="">
+                </div>
+            </div>
+            <div class="modal-box">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Assignment</h5>
+                        <div type="button" class="close" id="closeAddAssignmentPopup">&times;</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="addAssignmentHeading">Title:</label>
+                            <input type="text" class="form-control textarea" id="addAssignmentHeading" spellcheck="false">
+                        </div>
+                        <div class="form-group">
+                            <label for="addAssignmentDescription">Description:</label>
+                            <textarea class="form-control textarea" id="addAssignmentDescription"
+                                spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                    <div class="date-selector">
+                        <label for="deadline">Deadline:</label>
+                        <input type="date" id="deadline" name="deadline" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gradient-btn" id="saveAddAssignment">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="notification-list-container noti-notdisplay">
         <div class="notification-list">
             <div class="notification-heading">
@@ -233,7 +270,7 @@
                             <img src="rsc/icons8-search-50 (4).png" alt="" class="search-icon search-item">
                         </div>
                         <div class="add as-item">
-                            <button class="add-btn"><p>Add</p></button>
+                            <button class="add-btn" id="openAddAssignmentPopup"><p>Add</p></button>
                         </div>
                     </div>
                 </div>
@@ -295,6 +332,7 @@
         </div>
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/assignmentPopup.js"></script>
     <script src="scripts/announcements-script.js"></script>
 </body>
 </html>

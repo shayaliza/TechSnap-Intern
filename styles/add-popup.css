@@ -416,3 +416,7 @@ textarea {
 		margin-top: 10px;
 	}
 }
+
+.ind-add{
+	display: flex;
+}

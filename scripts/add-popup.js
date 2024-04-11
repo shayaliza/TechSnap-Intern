@@ -76,6 +76,27 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Event listener to close the modal when the close button is clicked
 	closeLinkModalBtn.addEventListener("click", closeLinkModal);
 
+		// ============    release popup    ============
+		const releasePopupBtn = document.getElementById("releaseUnit");
+		let releasePopupClose = document.getElementById("releasePopupClose");
+		let releasePopup = document.getElementById("releasePopup");
+	
+		releasePopupBtn.addEventListener("click", (e) => {
+			releasePopup.style.display = "block";
+			panel.style.filter = "blur(10px)";
+			body.style.filter = "blur(10px)";
+			navi.style.filter = "blur(10px)";
+			overlay.style.display = "block";
+		});
+	
+		releasePopupClose.addEventListener("click", (e) => {
+			releasePopup.style.display = "none";
+	
+			panel.style.filter = "none";
+			body.style.filter = "none";
+			navi.style.filter = "none";
+			overlay.style.display = "none";
+		});
 	// =============== upload popup ===========
 
 	const fileModal = document.getElementById("fileModal");
@@ -216,29 +237,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listener to close the modal when the close button is clicked
 	closeAddUnitModalBtn.addEventListener("click", closeaddUnitModal);
-
-	// ============    release popup    ============
-
-	const releasePopupBtn = document.querySelector("#releaseUnit");
-	let releasePopupClose = document.querySelector("#releasePopupClose");
-	let releasePopup = document.querySelector("#releasePopup");
-
-	releasePopupBtn.addEventListener("click", (e) => {
-		releasePopup.style.display = "block";
-		panel.style.filter = "blur(10px)";
-		body.style.filter = "blur(10px)";
-		navi.style.filter = "blur(10px)";
-		overlay.style.display = "block";
-	});
-
-	releasePopupClose.addEventListener("click", (e) => {
-		releasePopup.style.display = "none";
-
-		panel.style.filter = "none";
-		body.style.filter = "none";
-		navi.style.filter = "none";
-		overlay.style.display = "none";
-	});
 
 	// ============    delete item popup    ============
 

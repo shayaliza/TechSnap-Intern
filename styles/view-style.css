@@ -2,6 +2,8 @@
 	padding-top: 70px;
 	color: rgb(30, 30, 30);
 	overflow: hidden;
+	width: 50%;
+	margin: auto;
 }
 .view-container {
 	display: flex;
@@ -200,6 +202,7 @@ li span a {
 @media (max-width: 1024px) {
 	.body {
 		padding-left: 0px;
+		width: 100%;
 	}
 }
 @media (max-width: 768px) {
