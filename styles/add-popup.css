@@ -415,6 +415,9 @@ textarea {
 		margin-left: -20px;
 		margin-top: 10px;
 	}
+	.ind-add{
+		flex-direction: column;
+	}
 }
 
 .ind-add{
