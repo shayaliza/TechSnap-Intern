@@ -5,11 +5,11 @@ const closeAddAssignmentModalBtn = document.getElementById('closeAddAssignmentPo
 const addAssignmentHeadingInput = document.getElementById('addAssignmentHeading');
 const addAssignmentDescriptionTextarea = document.getElementById('addAssignmentDescription');
 
-var navi = document.getElementsByClassName("navigation")[0]
+var navi = document.getElementsByClassName("body")[0]
 var panel = document.getElementsByClassName("side-panel-container")[0]
 const overlay = document.getElementById('overlay');
 
-
+console.log(navi.style.filter)
 
 
 
@@ -17,8 +17,8 @@ const overlay = document.getElementById('overlay');
 function openAddAssignmentModal() {
     addAssignmentModal.style.display = 'block';
     overlay.style.display = 'block';
-        body.style.filter = "blur(10px)"
-        body.style.position = "fixed"
+        // body.style.filter = "blur(10px)"
+        // body.style.position = "fixed"
         navi.style.filter = "blur(10px)"
         panel.style.filter = "blur(10px)"
 }
@@ -27,8 +27,8 @@ function openAddAssignmentModal() {
 function closeAddAssignmentModal() {
     addAssignmentModal.style.display = 'none';
     overlay.style.display = 'none';
-    body.style.filter = "none"
-    body.style.position = "static"
+    // body.style.filter = "none"
+    // body.style.position = "static"
     navi.style.filter = "none"
     panel.style.filter = "none"
 
