@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.js" integrity="sha512-7uomMJLUlyzgg7Cu8C57a3XB/JX2fLV1mWES4FpvJm4QgC2WDsBDDeFfOQkGpCfZFjNLhBqsXavmRQGs8X1SBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="styles/announcements-style.css">
@@ -272,7 +274,7 @@
                                     <div class="overflow-hidden shadow-md bg-white rounded-lg">
                                       <table class="min-w-full divide-y divide-gray-200">
                                         </thead>
-                                        <tbody class="bg-white" class="list_item">
+                                        <tbody class="bg-white list_item" >
                                             <tr class="flex cursor-move flex-col items-center justify-between gap-4 space-x-4 rounded-md border border-gray-300 p-3 text-sm text-black shadow-gray-200 hover:bg-gray-50 sm:flex-row sm:gap-0">
                                                 <td class="flex w-full flex-1 flex-shrink-0 items-center space-x-3">
                                                     <img src="svg/drag.svg" alt="">
@@ -288,7 +290,7 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="flex items-center justify-between space-x-2 sm:w-fit">
+                                                <td class="my-3 flex items-center justify-between space-x-2 sm:w-fit">
                                                     <button type="button" class="inline-flex w-full items-center justify-center rounded border border-transparent bg-gray-800 px-3 py-1.5 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-40 sm:w-fit">Publish item</button>
                                                 </td>
                                                 <td class="flex space-x-2">
@@ -337,7 +339,7 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="flex items-center justify-between space-x-2 sm:w-fit">
+                                                <td class="my-3 flex items-center justify-between space-x-2 sm:w-fit">
                                                     <button type="button" class="inline-flex w-full items-center justify-center rounded border border-transparent bg-gray-800 px-3 py-1.5 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-40 sm:w-fit">Publish item</button>
                                                 </td>
                                                 <td class="flex space-x-2">
@@ -408,7 +410,7 @@
                                         <div class="overflow-hidden shadow-md bg-white rounded-lg">
                                           <table class="min-w-full divide-y divide-gray-200">
                                             </thead>
-                                            <tbody class="bg-white" class="list_item">
+                                            <tbody class="bg-white list_item">
                                                 <tr class="flex cursor-move flex-col items-center justify-between gap-4 space-x-4 rounded-md border border-gray-300 p-3 text-sm text-black shadow-gray-200 hover:bg-gray-50 sm:flex-row sm:gap-0">
                                                     <td class="flex w-full flex-1 flex-shrink-0 items-center space-x-3">
                                                         <img src="svg/drag.svg" alt="">
@@ -424,7 +426,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="flex items-center justify-between space-x-2 sm:w-fit">
+                                                    <td class="my-3 flex items-center justify-between space-x-2 sm:w-fit">
                                                         <button type="button" class="inline-flex w-full items-center justify-center rounded border border-transparent bg-gray-800 px-3 py-1.5 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-40 sm:w-fit">Publish item</button>
                                                     </td>
                                                     <td class="flex space-x-2">
@@ -473,7 +475,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="flex items-center justify-between space-x-2 sm:w-fit">
+                                                    <td class="my-3 flex items-center justify-between space-x-2 sm:w-fit">
                                                         <button type="button" class="inline-flex w-full items-center justify-center rounded border border-transparent bg-gray-800 px-3 py-1.5 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-40 sm:w-fit">Publish item</button>
                                                     </td>
                                                     <td class="flex space-x-2">
@@ -548,13 +550,12 @@ function rotatePath(clickedElement) {
 }
 
 function initializeSortable() {
-    const listItems = document.getElementsByTagName('tbody');
+    const listItems = document.getElementsByClassName('list_item');
     
     for (let i = 0; i < listItems.length; i++) {
         new Sortable(listItems[i], {
             animation: 350,
-            chosenClass: "sortable-chosen",
-            dragClass: "sortable-drag"
+            
         });
     }
 }
