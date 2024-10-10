@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/announcements-style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="rsc/icons8-project-management-48.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Announcements</title>
+</head>
+
+<body>
+    <div class="notification-list-container noti-notdisplay">
+        <div class="notification-list">
+            <div class="notification-heading">
+                <h3>Notifications</h3>
+                <h3 class="notification-close">x</h3>
+            </div>
+            <div class="notifications">
+                <div class="notification">
+                    <div class="noti-details">
+                        <div class="noti-image">
+                            <img src="rsc/paul-castanie-WZB_ZOqR4dA-unsplash.jpg" alt="" />
+                        </div>
+                        <div class="noti-detail">
+                            <p class="det">Paul updated the syllabus for Python</p>
+                            <p class="time">5 min ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="noti-details">
+                        <div class="noti-image">
+                            <img src="rsc/joshua-earle-ICE__bo2Vws-unsplash.jpg" alt="" />
+                        </div>
+                        <div class="noti-detail">
+                            <p class="det">Josh assigned a test for you</p>
+                            <p class="time">2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="noti-details">
+                        <div class="noti-image">
+                            <img src="rsc/radu-florin-4_QFycgpC4c-unsplash.jpg" alt="" />
+                        </div>
+                        <div class="noti-detail">
+                            <p class="det">Jim added you to python classroom</p>
+                            <p class="time">10 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="mark-as-read">See all notification</button>
+        </div>
+    </div>
+    <div class="profile-container prof-notdisplay">
+        <div class="profile">
+            <div class="user-info profile-item">
+                <div class="user-image">
+                    <img src="rsc/kristina-v-hYdikKrex4U-unsplash.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                    <p class="user-fullname">Emily Rose</p>
+                    <p class="user-name">@rose_emily003</p>
+                </div>
+                <div class="profile-close notification-close">
+                    <h4>x</h4>
+                </div>
+            </div>
+            <div class="settings profile-item">
+                <img src="rsc/icons8-settings-48.png" alt="" />
+                <p>Account Settings</p>
+            </div>
+            <div class="logout profile-item">
+                <img src="rsc/icons8-logout-48.png" alt="" />
+                <p>Logout</p>
+            </div>
+        </div>
+    </div>
+    <div class="side-panel-container">
+        <div class="side-panel">
+            <div class="panel-item logo-item">
+                <div class="logo">
+                    <img src="rsc/icons8-project-management-48.png" alt="" class="logo-image" />
+                    <p class="logo-name">managesnap</p>
+                </div>
+                <img src="rsc/icons8-close-30 (1).png" alt="" id="close" />
+            </div>
+            <div class="course-details panel-item">
+                <div class="panel-heading">
+                    <h3>Course Setting</h3>
+                    <img src="rsc/icons8-chevron-down-30.png" alt="" class="down arrow" />
+                </div>
+
+                <div class="details">
+                    <div class="dashboard panel-item">
+                        <img src="rsc/icons8-dashboard-layout-48.png" alt="" class="item" />
+                        <p class="name"><a href="">FAQ</a></p>
+                    </div>
+                    <div class="courses panel-item">
+                        <img src="rsc/icons8-e-learning-48.png" alt="" class="item" />
+                        <p class="name"><a href="index.html">Manage access</a></p>
+                    </div>
+                    <div class="groups panel-item">
+                        <img src="rsc/icons8-user-groups-48.png" alt="" class="item" />
+                        <p class="name"><a href="groups.html">Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="course-details panel-item">
+                <div class="panel-heading">
+                    <h3>Course Details</h3>
+                    <img src="rsc/icons8-chevron-down-30.png" alt="" class="down arrow" />
+                </div>
+                <div class="details">
+                    <div class="requests panel-item">
+                        <img src="rsc/icons8-request-service-48.png" alt="" class="item" />
+                        <p class="name"><a href="">Course Details</a></p>
+                    </div>
+                    <div class="detail announcements">
+                        <img src="rsc/icons8-commercial-48.png" alt="" class="item" />
+                        <p class="name"><a href="announcements.html">Announcements</a></p>
+                    </div>
+                    <div class="detail timetable">
+                        <img src="rsc/icons8-calendar-48.png" alt="" class="item" />
+                        <p class="name"><a href="timetable.html">Timetable</a></p>
+                    </div>
+                    <div class="detail syllabus">
+                        <img src="rsc/icons8-google-classroom-48.png" alt="" class="item" />
+                        <p class="name"><a href="syllabus.html">Syllabus</a></p>
+                    </div>
+                    <div class="detail assignment">
+                        <img src="rsc/icons8-audit-48.png" alt="" class="item" />
+                        <p class="name"><a href="assignment.html">Assignment</a></p>
+                    </div>
+                    <div class="detail exams">
+                        <img src="rsc/icons8-hand-with-pen-48.png" alt="" class="item" />
+                        <p class="name"><a href="exams.html">Exams</a></p>
+                    </div>
+                    <div class="detail units">
+                        <img src="rsc/icons8-unit-48.png" alt="" class="item" />
+                        <p class="name"><a href="units.html">Units</a></p>
+                    </div>
+                    <div class="detail courses">
+                        <img src="rsc/icons8-unit-48.png" alt="" class="item" />
+                        <p class="name"><a href="courses.html">courses</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="course-details panel-item">
+                <div class="panel-heading">
+                    <h3>Course Stats</h3>
+                    <img src="rsc/icons8-chevron-down-30.png" alt="" class="down arrow" />
+                </div>
+                <div class="details">
+                    <div class="requests panel-item">
+                        <img src="rsc/icons8-request-service-48.png" alt="" class="item" />
+                        <p class="name"><a href="#">Enrollment</a></p>
+                    </div>
+                    <div class="detail announcements">
+                        <img src="rsc/icons8-commercial-48.png" alt="" class="item" />
+                        <p class="name"><a href="dashboard.html">Statistics</a></p>
+                    </div>
+                    <div class="detail timetable">
+                        <img src="rsc/icons8-calendar-48.png" alt="" class="item" />
+                        <p class="name"><a href="timetable.html">All files</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-item support">
+                <button>
+                    <img src="rsc/icons8-support-60.png" alt="" />
+                    <p>Get Support</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="navi">
+            <div class="nav-logo">
+                <img src="rsc/icons8-menu-50.png" alt="" id="menu" class="nav-logo-item" />
+                <img src="rsc/icons8-project-management-48.png" alt="" class="nav-logo-item nav-logo-image" />
+                <p class="nav-logo-item nav-logo-text">managesnap</p>
+            </div>
+            <div class="nav-rest">
+                <div class="nav-item">
+                    <img src="rsc/icons8-notification-48 (1).png" alt="" class="noti-icon" />
+                </div>
+                <div class="profile-image nav-item">
+                    <img src="rsc/kristina-v-hYdikKrex4U-unsplash.jpg" alt="" class="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="announcements-container">
+            <div class="ann w-full">
+                <div class="heading ann-item">
+                    <div class="head heading-item">
+                        <p class="heading-name ">Edit Course Details</p>
+                    </div>
+                </div>
+                <!-- Main content -->
+                <div class="w-2/3  p-6 bg-white shadow-lg rounded-lg border-gray-200 border ml-3">
+                    <!-- Title -->
+                    <div class="mb-4">
+                        <label for="title"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Title:</label>
+                        <input type="text" id="title" placeholder="machine learning"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="mb-4">
+                        <label for="image"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Image:</label>
+                        <input type="file" id="image"
+                            class="w-full px-4 py-2 text-gray-500  border bg-gray-100 border-gray-300 rounded-md shadow-sm cursor-pointer focus:outline-none dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                        <!-- You can add a preview image here if needed -->
+                        <img src="/rsc/paul-castanie-WZB_ZOqR4dA-unsplash.jpg" alt="Image Preview"
+                            class="mt-4 h-24 w-auto rounded-md shadow-md">
+                    </div>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <label for="price"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Price:</label>
+                        <input type="text" id="price" placeholder="40000"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+
+                    <!-- Duration -->
+                    <div class="mb-4">
+                        <label for="duration"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Duration:</label>
+                        <input type="text" id="duration" placeholder="Enter duration"
+                            class="w-full px-4 py-2 border border-gray-300  bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+
+                    <!-- Brochure Upload -->
+                    <div class="mb-4">
+                        <label for="brochure"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Brochure:</label>
+                        <input type="file" id="brochure"
+                            class="w-full px-4 py-2 text-gray-500  bg-gray-100 border border-gray-300 rounded-md shadow-sm cursor-pointer focus:outline-none dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+
+                    <!-- Lessons -->
+                    <div class="mb-4">
+                        <label for="lessons"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Lessons:</label>
+                        <input type="number" id="lessons" value="0"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+                    <!-- Lessons -->
+                    <div class="mb-4">
+                        <label for="lessons"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Video Link:</label>
+                        <input type="number" id="lessons" value="0"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="mb-4">
+                        <label for="notes"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Desscription:</label>
+                        <textarea id="notes" rows="4" placeholder="Enter additional notes"
+                            class="w-full px-4 py-2 border border-gray-300   bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200"></textarea>
+                    </div>
+                    <!-- Notes -->
+                    <div class="mb-4">
+                        <label for="notes" class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Short
+                            Desscription:</label>
+                        <textarea id="notes" rows="4" placeholder="Enter additional notes"
+                            class="w-full px-4 py-2 border border-gray-300   bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200"></textarea>
+                    </div>
+
+                    <!-- Lessons -->
+                    <div class="mb-4">
+                        <label for="lessons"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Ratings:</label>
+                        <input type="number" id="lessons" value="0"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+                    <!-- Lessons -->
+                    <div class="mb-4">
+                        <label for="lessons"
+                            class="block text-gray-700 dark-mode:text-gray-100 font-semibold mb-2">Enrolled:</label>
+                        <input type="number" id="lessons" value="0"
+                            class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark-mode:bg-gray-700 dark-mode:border-gray-600 dark-mode:text-gray-200">
+                    </div>
+                    <!-- Submit Button -->
+                    <div>
+                        <button
+                            class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark-mode:bg-blue-600 dark-mode:hover:bg-blue-700">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/announcements-script.js"></script>
+</body>
+<div class="overlay" id="overlay"></div>
+
+</html>
