@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate with Names and Random Number</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Updated html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Hide the download buttons initially */
+        #downloadButton,
+        #downloadPdfButton {
+            display: none;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
 
-    <div class="relative w-full max-w-[800px] h-auto">
+    <div class="relative w-full max-w-[800px] h-auto" id="certificate">
         <div
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center  md:w-[620px] w-[300px]">
             <h1 class="text-black text-sm md:text-2xl font-bold">
@@ -25,29 +36,77 @@
             <p class="text-gray-700 text-[6px] md:text-[16px]">
                 For successfully completing the Training in ARTIFICIAL INTELLIGENCE from
                 10/Feb/2024 to 10/Aug/2024. She/He showcased an outstanding talent and we recognized that,
-                She had been focused and dedicated to up skill during the training session.
+                She had been focused and dedicated to upskill during the training session.
             </p>
         </div>
 
-        <!-- <div class="absolute top-[70%] left-[71%] transform -translate-x-1/2 md:left-[580px] z-10 text-center">
-            <img class="h-[40px] md:h-[100px] border-gray-600 border p-2 rounded-lg"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNdcA89721-005YVsdmokrB0vphrpHKntxHUhSLzHtonwkiiPUN83Dh8joiwvLItjLKc4&usqp=CAU" />
-        </div> -->
         <div
             class="absolute md:top-[70%] top-[69%] left-[73%] transform -translate-x-1/2 md:left-[580px] z-10 text-center">
             <div
                 class="border border-gray-600 rounded-lg w-[50px] md:w-[100px] h-[50px] md:h-[100px] flex items-center justify-center bg-white">
-                <img class="h-[40px] md:h-[90px] rounded-lg"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNdcA89721-005YVsdmokrB0vphrpHKntxHUhSLzHtonwkiiPUN83Dh8joiwvLItjLKc4&usqp=CAU" />
+                <img class="h-[40px] md:h-[90px] rounded-lg" src="./rsc/QRcode.png" />
             </div>
         </div>
-
-
-
 
         <!-- Certificate background image -->
         <img src="./rsc/certificate.png" alt="Certificate Image" class="w-full h-auto object-cover rounded-lg">
     </div>
+
+    <button id="downloadButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Download Certificate</button>
+    <button id="downloadPdfButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded">Download as PDF</button>
+
+    <script>
+        // Function to download the certificate as an image
+        function downloadCertificate() {
+            html2canvas(document.querySelector("#certificate")).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'certificate.png';
+                link.click();
+            }).catch(error => {
+                console.error('Error capturing certificate:', error);
+            });
+        }
+
+        // Function to download the certificate as a PDF
+        async function downloadCertificateAsPDF() {
+            const { jsPDF } = window.jspdf; // Import jsPDF from window
+            const canvas = await html2canvas(document.querySelector("#certificate"), { scale: 2 }); // Increase the scale
+            const imgData = canvas.toDataURL('image/png');
+
+            const pdf = new jsPDF('l', 'pt', 'a4'); // Create a new jsPDF instance in landscape mode
+
+            // Calculate width and height to maintain aspect ratio
+            const pdfWidth = pdf.internal.pageSize.width;
+            const pdfHeight = pdf.internal.pageSize.height;
+            const imgWidth = canvas.width;
+            const imgHeight = canvas.height;
+
+            // Calculate the new dimensions while maintaining the aspect ratio
+            const aspectRatio = imgWidth / imgHeight;
+            let newWidth, newHeight;
+
+            if (imgWidth > imgHeight) {
+                newWidth = pdfWidth;
+                newHeight = pdfWidth / aspectRatio;
+            } else {
+                newHeight = pdfHeight;
+                newWidth = pdfHeight * aspectRatio;
+            }
+
+            // Add the image to the PDF
+            pdf.addImage(imgData, 'PNG', (pdfWidth - newWidth) / 2, (pdfHeight - newHeight) / 2, newWidth, newHeight);
+            pdf.save('certificate.pdf'); // Save the PDF
+        }
+
+        // Show the download buttons after the page loads
+        window.onload = function () {
+            document.getElementById('downloadButton').style.display = 'block';
+            document.getElementById('downloadPdfButton').style.display = 'block';
+            document.getElementById('downloadButton').onclick = downloadCertificate;
+            document.getElementById('downloadPdfButton').onclick = downloadCertificateAsPDF;
+        };
+    </script>
 
 </body>
 
