@@ -12,7 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         /* Hide the download buttons initially */
-        #downloadButton,
+        #downloadJpgButton,
+        #downloadPngButton,
+        #downloadHighJpgButton,
+        #downloadHighPngButton,
         #downloadPdfButton {
             display: none;
         }
@@ -34,9 +37,7 @@
             </h1>
         </div>
         <div class="absolute top-[85%] left-[51%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-center">
-            <!-- <p id="randomNumber" class="text-black text-[8px] md:text-lg">1234567893</p> -->
             <p id="randomNumber" class="text-black text-[8px] md:text-lg no-underline">1234567893</p>
-
         </div>
         <div
             class="absolute top-[62%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center md:w-[620px] w-[300px]">
@@ -49,32 +50,99 @@
 
         <div
             class="absolute md:top-[74%] top-[74%]   left-[73%] transform -translate-x-1/2 md:left-[580px] z-10 text-center">
-            <img class="h-[35px] md:h-[80px] " src="./rsc/QRcode.png" />
+            <img class="h-[35px] md:h-[80px]" src="./rsc/QRcode.png" />
         </div>
 
         <!-- Certificate background image -->
         <img src="./rsc/certificate.png" alt="Certificate Image" class="w-full h-auto object-cover rounded-lg">
     </div>
 
-    <button id="downloadButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Download Certificate</button>
+    <button id="downloadJpgButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Download Certificate as
+        JPG</button>
+    <button id="downloadPngButton" class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded">Download Certificate as
+        PNG</button>
+
+    <!-- New buttons for high-quality download -->
+    <button id="downloadHighJpgButton" class="mt-4 px-4 py-2 bg-indigo-500 text-white rounded">Download High-Quality
+        JPG</button>
+    <button id="downloadHighPngButton" class="mt-4 px-4 py-2 bg-orange-500 text-white rounded">Download High-Quality
+        PNG</button>
+
     <button id="downloadPdfButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded">Download as PDF</button>
 
     <canvas id="hiddenCanvas"></canvas> <!-- Hidden canvas for downloading -->
 
     <script>
-        // Function to download the certificate as an image
-        function downloadCertificate() {
+        // Function to download the certificate as a regular JPG image
+        function downloadCertificateAsJpg() {
             const certificateElement = document.getElementById("certificate");
 
             html2canvas(certificateElement, {
-                scale: 2, // Increase scale for better quality
-                useCORS: true, // Allow cross-origin images
-                width: certificateElement.offsetWidth, // Set width based on the element's offset width
-                height: certificateElement.offsetHeight // Set height based on the element's offset height
+                scale: 1, // Normal quality
+                useCORS: true,
+                width: certificateElement.offsetWidth,
+                height: certificateElement.offsetHeight
             }).then(canvas => {
                 const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/png');
+                link.href = canvas.toDataURL('image/jpeg', 1.0); // Quality set to 1.0 for highest JPG quality
+                link.download = 'certificate.jpg';
+                link.click();
+            }).catch(error => {
+                console.error('Error capturing certificate:', error);
+            });
+        }
+
+        // Function to download the certificate as a regular PNG image
+        function downloadCertificateAsPng() {
+            const certificateElement = document.getElementById("certificate");
+
+            html2canvas(certificateElement, {
+                scale: 1, // Normal quality
+                useCORS: true,
+                width: certificateElement.offsetWidth,
+                height: certificateElement.offsetHeight
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png'); // PNG does not support quality parameter, so highest quality by default
                 link.download = 'certificate.png';
+                link.click();
+            }).catch(error => {
+                console.error('Error capturing certificate:', error);
+            });
+        }
+
+        // Function to download the certificate as a high-quality JPG image
+        function downloadCertificateAsHighJpg() {
+            const certificateElement = document.getElementById("certificate");
+
+            html2canvas(certificateElement, {
+                scale: 3, // Higher quality
+                useCORS: true,
+                width: certificateElement.offsetWidth,
+                height: certificateElement.offsetHeight
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/jpeg', 1.0); // Quality set to 1.0 for highest JPG quality
+                link.download = 'certificate-high-quality.jpg';
+                link.click();
+            }).catch(error => {
+                console.error('Error capturing certificate:', error);
+            });
+        }
+
+        // Function to download the certificate as a high-quality PNG image
+        function downloadCertificateAsHighPng() {
+            const certificateElement = document.getElementById("certificate");
+
+            html2canvas(certificateElement, {
+                scale: 3, // Higher quality
+                useCORS: true,
+                width: certificateElement.offsetWidth,
+                height: certificateElement.offsetHeight
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png'); // PNG does not support quality parameter, so highest quality by default
+                link.download = 'certificate-high-quality.png';
                 link.click();
             }).catch(error => {
                 console.error('Error capturing certificate:', error);
@@ -85,7 +153,7 @@
         async function downloadCertificateAsPDF() {
             const { jsPDF } = window.jspdf; // Import jsPDF from window
 
-            const canvas = await html2canvas(document.querySelector("#certificate"), { scale: 2 });
+            const canvas = await html2canvas(document.querySelector("#certificate"), { scale: 3 });
 
             // Prepare the PDF document
             const pdf = new jsPDF('l', 'pt', 'a4'); // Create a new jsPDF instance in landscape mode
@@ -116,9 +184,16 @@
 
         // Show the download buttons after the page loads
         window.onload = function () {
-            document.getElementById('downloadButton').style.display = 'block';
+            document.getElementById('downloadJpgButton').style.display = 'block';
+            document.getElementById('downloadPngButton').style.display = 'block';
+            document.getElementById('downloadHighJpgButton').style.display = 'block';
+            document.getElementById('downloadHighPngButton').style.display = 'block';
             document.getElementById('downloadPdfButton').style.display = 'block';
-            document.getElementById('downloadButton').onclick = downloadCertificate;
+
+            document.getElementById('downloadJpgButton').onclick = downloadCertificateAsJpg;
+            document.getElementById('downloadPngButton').onclick = downloadCertificateAsPng;
+            document.getElementById('downloadHighJpgButton').onclick = downloadCertificateAsHighJpg;
+            document.getElementById('downloadHighPngButton').onclick = downloadCertificateAsHighPng;
             document.getElementById('downloadPdfButton').onclick = downloadCertificateAsPDF;
         };
     </script>
