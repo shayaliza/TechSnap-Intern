@@ -91,26 +91,26 @@
             });
 
             // Wait for the QR code to render, then add the overlay image
-            setTimeout(() => {
-                const qrCanvas = qrCodeContainer.querySelector('canvas');
-                if (qrCanvas && overlayImageUrl) {
-                    const ctx = qrCanvas.getContext('2d');
-                    const overlayImg = new Image();
-                    overlayImg.src = overlayImageUrl;
+            // setTimeout(() => {
+            //     const qrCanvas = qrCodeContainer.querySelector('canvas');
+            //     if (qrCanvas && overlayImageUrl) {
+            //         const ctx = qrCanvas.getContext('2d');
+            //         const overlayImg = new Image();
+            //         overlayImg.src = overlayImageUrl;
 
-                    overlayImg.onload = () => {
-                        const overlaySize = isMobile ? 10 : 50; // Smaller size for mobile, larger for desktop
+            //         overlayImg.onload = () => {
+            //             const overlaySize = isMobile ? 10 : 50; // Smaller size for mobile, larger for desktop
 
-                        ctx.drawImage(
-                            overlayImg,
-                            (qrCanvas.width - overlaySize) / 2,
-                            (qrCanvas.height - overlaySize) / 2,
-                            overlaySize,
-                            overlaySize
-                        );
-                    };
-                }
-            }, 500);
+            //             ctx.drawImage(
+            //                 overlayImg,
+            //                 (qrCanvas.width - overlaySize) / 2,
+            //                 (qrCanvas.height - overlaySize) / 2,
+            //                 overlaySize,
+            //                 overlaySize
+            //             );
+            //         };
+            //     }
+            // }, 500);
         }
 
         // Download functions (for JPG, PNG, High-Quality JPG/PNG, PDF)
