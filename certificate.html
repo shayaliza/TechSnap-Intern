@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate with Names and Random Number</title>
+    <title>Certificate with Names, Random Number, and Dynamic QR Code</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Updated html2canvas library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- Include jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Include QRCode.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        /* Hide the download buttons initially */
         #downloadJpgButton,
         #downloadPngButton,
         #downloadHighJpgButton,
@@ -22,7 +23,6 @@
 
         #hiddenCanvas {
             display: none;
-            /* Hide the canvas */
         }
     </style>
 </head>
@@ -31,7 +31,7 @@
 
     <div class="relative w-full max-w-[800px] h-auto" id="certificate">
         <div
-            class="absolute top-[48%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center  md:w-[620px] w-[300px]">
+            class="absolute top-[48%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center md:w-[620px] w-[300px]">
             <h1 class="text-black text-sm md:text-2xl font-bold">
                 Desamsetii Sai Pavan Saketh
             </h1>
@@ -48,9 +48,9 @@
             </p>
         </div>
 
-        <div
-            class="absolute md:top-[74%] top-[74%]   left-[73%] transform -translate-x-1/2 md:left-[580px] z-10 text-center">
-            <img class="h-[35px] md:h-[80px]" src="./rsc/QRcode.png" />
+        <!-- Dynamic QR Code Container -->
+        <div id="qrCodeContainer"
+            class="absolute md:top-[74%] top-[74%] left-[73%] transform -translate-x-1/2 md:left-[580px] z-10 text-center">
         </div>
 
         <!-- Certificate background image -->
@@ -70,10 +70,55 @@
 
     <button id="downloadPdfButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded">Download as PDF</button>
 
-    <canvas id="hiddenCanvas"></canvas> <!-- Hidden canvas for downloading -->
+    <canvas id="hiddenCanvas"></canvas>
 
     <script>
-        // Function to download the certificate as a regular JPG image
+        // Function to generate QR code with an optional overlay image in the center
+        function generateQRCode(url, overlayImageUrl) {
+            const qrCodeContainer = document.getElementById('qrCodeContainer');
+            qrCodeContainer.innerHTML = ''; // Clear existing QR code if any
+
+            const isMobile = window.innerWidth <= 500; // Adjust threshold for mobile as needed
+            const qrSize = isMobile ? 40 : 80; // Smaller size for mobile, larger for desktop
+            // Create the QR code
+            const qr = new QRCode(qrCodeContainer, {
+                text: url,
+                width: qrSize,
+                height: qrSize,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Wait for the QR code to render, then add the overlay image
+            setTimeout(() => {
+                const qrCanvas = qrCodeContainer.querySelector('canvas');
+                if (qrCanvas && overlayImageUrl) {
+                    const ctx = qrCanvas.getContext('2d');
+                    const overlayImg = new Image();
+                    overlayImg.src = overlayImageUrl;
+
+                    overlayImg.onload = () => {
+                        const overlaySize = isMobile ? 10 : 50; // Smaller size for mobile, larger for desktop
+
+                        ctx.drawImage(
+                            overlayImg,
+                            (qrCanvas.width - overlaySize) / 2,
+                            (qrCanvas.height - overlaySize) / 2,
+                            overlaySize,
+                            overlaySize
+                        );
+                    };
+                }
+            }, 500);
+        }
+
+        // Download functions (for JPG, PNG, High-Quality JPG/PNG, PDF)
+        function downloadCertificateAsJpg() { /* existing JPG download code */ }
+        function downloadCertificateAsPng() { /* existing PNG download code */ }
+        function downloadCertificateAsHighJpg() { /* existing high-quality JPG download code */ }
+        function downloadCertificateAsHighPng() { /* existing high-quality PNG download code */ }
+
         function downloadCertificateAsJpg() {
             const certificateElement = document.getElementById("certificate");
 
@@ -92,7 +137,6 @@
             });
         }
 
-        // Function to download the certificate as a regular PNG image
         function downloadCertificateAsPng() {
             const certificateElement = document.getElementById("certificate");
 
@@ -111,7 +155,6 @@
             });
         }
 
-        // Function to download the certificate as a high-quality JPG image
         function downloadCertificateAsHighJpg() {
             const certificateElement = document.getElementById("certificate");
 
@@ -130,7 +173,6 @@
             });
         }
 
-        // Function to download the certificate as a high-quality PNG image
         function downloadCertificateAsHighPng() {
             const certificateElement = document.getElementById("certificate");
 
@@ -151,25 +193,17 @@
 
         // Function to download the certificate as a PDF
         async function downloadCertificateAsPDF() {
-            const { jsPDF } = window.jspdf; // Import jsPDF from window
-
+            const { jsPDF } = window.jspdf;
             const canvas = await html2canvas(document.querySelector("#certificate"), { scale: 3 });
-
-            // Prepare the PDF document
-            const pdf = new jsPDF('l', 'pt', 'a4'); // Create a new jsPDF instance in landscape mode
+            const pdf = new jsPDF('l', 'pt', 'a4');
             const imgData = canvas.toDataURL('image/png');
 
-            // Calculate width and height to maintain aspect ratio
             const pdfWidth = pdf.internal.pageSize.width;
             const pdfHeight = pdf.internal.pageSize.height;
-            const imgWidth = canvas.width;
-            const imgHeight = canvas.height;
-
-            // Calculate the new dimensions while maintaining the aspect ratio
-            const aspectRatio = imgWidth / imgHeight;
+            const aspectRatio = canvas.width / canvas.height;
             let newWidth, newHeight;
 
-            if (imgWidth > imgHeight) {
+            if (canvas.width > canvas.height) {
                 newWidth = pdfWidth;
                 newHeight = pdfWidth / aspectRatio;
             } else {
@@ -177,13 +211,14 @@
                 newWidth = pdfHeight * aspectRatio;
             }
 
-            // Add the image to the PDF
             pdf.addImage(imgData, 'PNG', (pdfWidth - newWidth) / 2, (pdfHeight - newHeight) / 2, newWidth, newHeight);
-            pdf.save('certificate.pdf'); // Save the PDF
+            pdf.save('certificate.pdf');
         }
 
-        // Show the download buttons after the page loads
+        // Show download buttons and generate QR code on page load
         window.onload = function () {
+            generateQRCode('https://example.com', 'https://dummyimage.com/200x200');
+
             document.getElementById('downloadJpgButton').style.display = 'block';
             document.getElementById('downloadPngButton').style.display = 'block';
             document.getElementById('downloadHighJpgButton').style.display = 'block';
